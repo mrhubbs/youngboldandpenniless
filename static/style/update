@@ -1,0 +1,41 @@
+#!/usr/bin/env python
+
+
+import os
+
+
+temp_less = '.temp.less'
+
+
+if os.path.exists(temp_less):
+    os.remove(temp_less)
+
+
+order = []
+with open('order.list', 'r') as f:
+    for fname in f.readlines():
+        fname = fname.rstrip('\n\r')
+        if fname == '' or not fname.endswith('.less'):
+            continue
+
+        order.append(fname)
+
+
+# Create a list that contains all the .less files.
+total = filter(lambda x: x.endswith('.less'), os.listdir(os.curdir))
+final = order[:]
+for t in total:
+    if t not in order:
+        final.append(t)
+
+
+for f in final:
+    cmd = 'cat {} >> {}'.format(f, temp_less)
+    print(cmd)
+    os.system(cmd)
+
+
+cmd = 'lessc {} > styles.css'.format(temp_less)
+print(cmd)
+os.system(cmd)
+os.remove(temp_less)

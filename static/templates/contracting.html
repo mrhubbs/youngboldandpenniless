@@ -1,0 +1,55 @@
+{% extends "basepage.html" %}
+
+{% set current_page = "contracting.html" %}
+
+
+{% block banner %}
+
+<h1 class='page-header'>
+Contracting
+</h1>
+<p class='banner-content'>
+My expertise is for hire.
+</p>
+
+{% endblock banner %}
+
+{% block body %}
+
+<div class='content-width-capped'>
+
+<h1>
+Do you need?
+</h1>
+
+</div>
+
+{{ banner_blurb(
+    'Software that Works',
+    "Don't spend hours lost in a user interface.",
+    'static/images/software-that-works.png',
+    'blue',
+    'right') }}
+
+{{ banner_blurb(
+    'Task Automation',
+    "Free up your workforce.</br>Don't do the same thing all day.",
+    'static/images/task-automation.png',
+    'green',
+    'right') }}
+
+{{ banner_blurb(
+    'Workflow Integration',
+    "Seamlessly connect existing tools.",
+    'static/images/workflow-integration.png',
+    'red',
+    'right') }}
+
+{{ banner_blurb(
+    'Custom Tools',
+    'Would work be easier if you had a program to do <i><b>x</b></i>?',
+    'static/images/custom-tools.png',
+    'purple',
+    'right') }}
+
+{% endblock body %}

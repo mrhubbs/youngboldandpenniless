@@ -1,0 +1,52 @@
+
+
+.banner {
+  background-color: @title-green;
+  padding: 10px;
+}
+
+
+.banner-color-green {
+  background-color: @brand-green;
+}
+.banner-color-blue {
+  background-color: @brand-blue;
+}
+.banner-color-purple {
+  background-color: @brand-purple;
+}
+.banner-color-red {
+  background-color: @brand-red;
+}
+
+
+.banner-content {
+  line-height: 1.4;
+  font-size: 24px;
+  margin-top: 0;
+}
+
+
+.banner-blurb {
+  text-align: center;
+  height: 200px;
+}
+.banner-blurb-left {
+  &:extend(.banner-blurb);
+  margin-left: 215px;
+}
+.banner-blurb-right {
+  &:extend(.banner-blurb);
+  margin-right: 215px;
+}
+.banner-icon {
+  width: 200px;
+}
+.banner-icon-left {
+  &:extend(.banner-icon);
+  float: left;
+}
+.banner-icon-right {
+  &:extend(.banner-icon);
+  float: right;
+}

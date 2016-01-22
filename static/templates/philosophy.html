@@ -1,0 +1,50 @@
+{% extends "basepage.html" %}
+
+{% set current_page = "philosophy.html" %}
+
+{% block banner %}
+
+<h1 class='page-header'>
+Philosophy
+</h1>
+<p class='banner-content'>
+Human-centric design.
+</p>
+
+{% endblock banner %}
+
+{% block body %}
+
+<div class='content-width-capped'>
+
+<h1 class='section-header'>Making Software for People</h1>
+<p class='lead'>
+I'm passionate about making technology that's truly designed for humans--
+technology that takes into account how we naturally think, learn, and interact with the world.
+Such software should be:
+</p>
+
+</div>
+
+{{ banner_blurb(
+    'Intuitive',
+    'Make use of natural symbols, colors, and</br>thought processes.',
+    'static/images/intuitive.png',
+    'green',
+    'left')}}
+
+{{ banner_blurb(
+    'Clear',
+    'Communicate at a glance what an app is doing and what actions are possible.',
+    'static/images/clear.png',
+    'purple',
+    'right')}}
+
+{{ banner_blurb(
+    'Beautiful',
+    'Important for its own sake, beauty also</br>leads to good design.',
+    'static/images/beautiful.png',
+    'blue',
+    'left')}}
+
+{% endblock body %}

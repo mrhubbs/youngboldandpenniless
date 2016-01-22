@@ -1,0 +1,37 @@
+{% extends "basepage.html" %}
+
+{% set current_page = "projects.html" %}
+
+
+{% block banner %}
+
+<h1 class='page-header'>
+Projects
+</h1>
+<p class='banner-content'>
+Tutorials and documentation for various code projects.
+</p>
+
+{% endblock banner %}
+
+{% block body %}
+
+{{ banner_blurb(
+    'DNA',
+    "Automatically propagate changes to data-sets.</br></br>" +
+    button_link('github', 'https://github.com/mrhubbs/dna'),
+    'static/images/dna.png',
+    'blue',
+    'left')
+}}
+
+{{ banner_blurb(
+    'Nuts',
+    'Flexible serialization for Python.</br></br>' +
+    button_link('github', 'https://github.com/mrhubbs/nuts'),
+    'static/images/nuts.png',
+    'green',
+    'left')
+}}
+
+{% endblock body %}
