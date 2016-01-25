@@ -117,6 +117,14 @@ h3 {
 h4 {
   font-size: 30px;
 }
+.warning {
+  background: #edf907;
+  border: 1px solid #565b00;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+}
 .banner {
   background-color: rgba(33, 149, 14, 0.7);
   padding: 10px;
