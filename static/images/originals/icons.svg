@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4142136"
-     inkscape:cx="424.00149"
-     inkscape:cy="672.94432"
+     inkscape:zoom="2.0000001"
+     inkscape:cx="355.37061"
+     inkscape:cy="756.21848"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -1036,6 +1036,30 @@
        id="path3157-9"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/william/programs/mrhubbs.github.io/static/images/custom-tools.png"
+       inkscape:export-xdpi="130.80678"
+       inkscape:export-ydpi="130.80678" />
+    <path
+       style="fill:none;stroke:#303030;stroke-width:2.0999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 383.29445,238.7559 c -12.27855,-2.29204 -23.81688,-2.89659 -35.97406,0.24829"
+       id="path6309-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#303030;stroke-width:1.99537408;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="M 277.12859,282.84012 C 267.0516,276.57022 257.04696,272.0497 245.19947,270.63434"
+       id="path6309-5-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/william/programs/mrhubbs.github.io/static/images/nuts.png"
+       inkscape:export-xdpi="130.80678"
+       inkscape:export-ydpi="130.80678" />
+    <path
+       style="fill:none;stroke:#303030;stroke-width:2.44223642;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 248.33349,260.36575 c -14.52621,0.0316 -27.84223,1.83178 -41.05595,8.05021"
+       id="path6309-5-7-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/william/programs/mrhubbs.github.io/static/images/nuts.png"
        inkscape:export-xdpi="130.80678"
        inkscape:export-ydpi="130.80678" />
   </g>
