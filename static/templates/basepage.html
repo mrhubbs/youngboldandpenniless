@@ -5,10 +5,7 @@
 {% macro banner_blurb(title, desc, img, color, dir) %}
     <div class='banner-spacer content-width-capped'>&nbsp;</div>
 
-    <div class='banner banner-color-{{color}} gridlines'>
-        <div style='float: right; '>
-        </div>
-
+    <div class='banner banner-color-{{color}} gridlines  content-width-capped'>
         <div class='content-width-capped-extra'>
             <img src='{{ img }}' class='banner-icon-{{dir}}'>
 
@@ -50,7 +47,7 @@
 
     <div>
 
-        <div class='content-width-capped warning'>
+        <div class='content-width-capped notice-warning'>
             Stay tuned. This site is under construction.
         </div>
 
