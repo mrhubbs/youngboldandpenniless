@@ -3,9 +3,9 @@
 
 
 {% macro banner_blurb(title, desc, img, color, dir) %}
-    <div class='banner-spacer content-width-capped'>&nbsp;</div>
+    <div class='banner-spacer'>&nbsp;</div>
 
-    <div class='banner banner-color-{{color}} gridlines  content-width-capped'>
+    <div class='banner banner-color-{{color}}'>
         <div class='content-width-capped-extra'>
             <img src='{{ img }}' class='banner-icon-{{dir}}'>
 
@@ -37,7 +37,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>The Worker - {{current_page[:-5].capitalize()}}</title>
+    <title>The Worker &middot; {{current_page[:-5].capitalize()}}</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <link rel="stylesheet" href="static/style/styles.css" type="text/css">
