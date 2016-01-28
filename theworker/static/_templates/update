@@ -6,7 +6,7 @@ from jinja2 import Environment, FileSystemLoader
 
 
 base_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))
-template_path = os.path.join(base_path, 'static/templates')
+template_path = os.path.join(base_path, 'static/_templates')
 template_environment = Environment(
     autoescape=False,
     loader=FileSystemLoader(template_path),

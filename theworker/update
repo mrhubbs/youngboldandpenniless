@@ -15,5 +15,5 @@ echo $SECTION_HEADER
 echo "jinja process templates"
 echo $SECTION_HEADER
 
-cd ../templates
+cd ../_templates
 ./update
