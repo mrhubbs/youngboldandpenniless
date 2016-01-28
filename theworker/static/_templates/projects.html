@@ -5,12 +5,7 @@
 
 {% block banner %}
 
-<h1 class='page-header'>
-Projects
-</h1>
-<p class='banner-content'>
-
-</p>
+    {{ banner_header('Projects') }}
 
 {% endblock banner %}
 
@@ -18,7 +13,7 @@ Projects
 
 {{ banner_blurb(
     'DNA',
-    "Automatically propagate changes to data-sets.</br></br>" +
+    "Automatically propagate changes to data-sets.<br><br>" +
     button_link('github', 'https://github.com/mrhubbs/dna'),
     'static/images/dna.png',
     'blue',
@@ -27,7 +22,7 @@ Projects
 
 {{ banner_blurb(
     'Nuts',
-    'Flexible serialization for Python.</br></br>' +
+    'Flexible serialization for Python.<br><br>' +
     button_link('github', 'https://github.com/mrhubbs/nuts') +
     button_link('docs', 'projects/nuts/docs/index.html'),
     'static/images/nuts.png',

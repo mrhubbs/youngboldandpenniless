@@ -2,20 +2,23 @@
 
 {% set current_page = "about.html" %}
 
-{% block banner %}
-
-<h1 class='page-header'>
-About
-</h1>
-<p class='banner-content'>
-
-</p>
-
-{% endblock banner %}
+{% block head %}
+<!-- <link rel="stylesheet" href="static/style/about.css" type="text/css"> -->
+{% endblock head %}
 
 {% block body %}
 
 <div class='content-width-capped'>
+
+<div class='about-site-header'>
+
+    <p class='about-welcome'>Welcome to</p>
+
+    <center class='about-site-name'>The Worker</center>
+
+</div>
+
+<br>
 
 <center>
 <img src='static/images/profile.jpg' style='width: 35%;'>
@@ -25,7 +28,7 @@ About
 Hi, I'm William (aka <a href='http://github.com/mrhubbs'>mrhubbs</a>).  Welcome to my website!
 </p>
 <p class='lead'>
-A technical offshoot of <a href='http://youngboldandpenniless.com'>youngboldandpenniless.com<a>, this site
+A technical offshoot of <a href='http://youngboldandpenniless.com'>youngboldandpenniless</a>, this site
 contains documentation for personal code projects, my general software philosophy, a technical blog,
 and the specific expertise I have to offer.
 </p>
@@ -35,8 +38,16 @@ and the specific expertise I have to offer.
 As a child, a strong interest in design led to hours reading about <a href='https://en.wikipedia.org/wiki/Tom_Swift#Second_series_.281954.E2.80.931971.29'>Tom Swift, Jr.'s inventions</a> and building with Legos.
 Lego Mindstorms introduced me to programming.  Shortly thereafter I began learning C on Linux.
 </p>
+
 <p>
 Ten years later, I am fluent in C and Python, familiar with a half-dozen other languages, and well-versed in web technologies.
+I'm equally comfortable writing optimized C-code, cross-platform desktop applications, websites, and Android apps
+(using <a href='http://kivy.org'>Kivy</a>, my Java is a little rusty).
+
+<br>
+<br>
+<br>
+<br>
 </p>
 
 </div>

@@ -4,12 +4,7 @@
 
 {% block banner %}
 
-<h1 class='page-header'>
-Philosophy
-</h1>
-<p class='banner-content'>
-Human-centric design.
-</p>
+    {{ banner_header('Philosophy', 'Human-centric design.') }}
 
 {% endblock banner %}
 
@@ -27,7 +22,7 @@ Such software should be:
 
 {{ banner_blurb(
     'Intuitive',
-    'Make use of natural symbols, colors,</br>and thought processes.',
+    'Make use of natural symbols, colors,<br>and thought processes.',
     'static/images/intuitive.png',
     'green',
     'left')}}
@@ -41,7 +36,7 @@ Such software should be:
 
 {{ banner_blurb(
     'Beautiful',
-    'Important for its own sake, beauty also</br>leads to good design.',
+    'Important for its own sake, beauty also<br>leads to good design.',
     'static/images/beautiful.png',
     'blue',
     'left')}}

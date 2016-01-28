@@ -22,26 +22,32 @@
   padding-bottom: 9px;
   margin-top: 5px;
   margin-bottom: 5px;
+
+  color: #333;
 }
 
 
 .content {
-  margin-top: .75rem;
+  margin-top: 0;
+  margin-bottom: 0;
   font-size: 20px;
 }
 
 
 .empty-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
   width: 400px;
-  margin-left: -200px;
+  height: 45vh;
   text-align: center;
 
   font-weight: bolder;
   font-size: 20px;
   color: #656464;
+}
+
+
+.empty-content p {
+    position: relative;
+    top: 50%;
 }
 
 
@@ -63,4 +69,11 @@ h3 {
 h4 {
   &:extend(.heading);
   font-size: 1.5rem;
+}
+
+
+.copyright {
+  font-size: 20px;
+  margin-top: .75em;
+  margin-bottom: .75em;
 }

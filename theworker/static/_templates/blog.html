@@ -4,28 +4,25 @@
 
 {% block banner %}
 
-<h1 class='page-header'>
-Blog
-</h1>
-<p class='banner-content'>
-Musings of a technical nature.
-</p>
+    {{ banner_header('Blog', 'Musings of a technical nature.') }}
 
 {% endblock banner %}
 
 {% block body %}
 
-<div class='empty-content'>
-There is nothing here...
-</br>
-<span id='show-later' style='display: none;'>yet...</span>
+<div class='content-width-capped empty-content'>
+<p>
+    There is nothing here...
+    <br>
+    <span id='show-later' style='display: none;'>yet...</span>
+</p>
 </div>
 
 <script>
 
 setTimeout(function() {
     $('#show-later').fadeIn();
-}, 1000);
+}, 720);
 
 </script>
 
