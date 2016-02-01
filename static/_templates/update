@@ -1,0 +1,44 @@
+#!/usr/bin/env python
+
+
+import os
+from jinja2 import Environment, FileSystemLoader
+
+
+base_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))
+template_path = os.path.join(base_path, 'static/_templates')
+template_environment = Environment(
+    autoescape=False,
+    loader=FileSystemLoader(template_path),
+    trim_blocks=False
+)
+
+
+def render_template(template_fname, context):
+    return template_environment.get_template(
+        template_fname
+    ).render(context)
+
+
+ignore = []
+with open('ignore.list', 'r') as f:
+    for fname in f.readlines():
+        fname = fname.rstrip('\n\r')
+        if fname != '':
+            ignore.append(fname)
+
+
+for f in os.listdir(template_path):
+    if not f.endswith('.html') or f in ignore:
+        continue
+
+    template_fpath = os.path.join(template_path, f)
+
+    out_fname = os.path.basename(template_fpath)
+    out_fpath = os.path.join(base_path, out_fname)
+
+    print("{: <20} {{}} > {}".format(out_fname, out_fname))
+
+    with open(out_fpath, 'w') as f:
+        html = render_template(out_fname, {})
+        f.write(html)
