@@ -11,11 +11,15 @@
 
 {% block body %}
 
+<div class='banner-spacer'></div>
+
 <div class='content-width-capped'>
 
-    <p id='apology' style='opacity: 0.0;'>
+    <center>
+    <p id='apology' style='opacity: 0.0; font-size: .9rem;'>
     Sorry for the strange method of presenting contact info, but one must dodge spambots somehow!
     </p>
+    </center>
 
     <center class='content-width-capped' style='font-family: "Lucida Console", Monaco, monospace;
     font-size: .30rem; line-height: .41rem; font-weight: bold; margin-top: 15px;'>
@@ -48,6 +52,10 @@
 
 </div>
 
+{% endblock body %}
+
+{% block scripts %}
+
 <script>
 
 var dat = [
@@ -67,7 +75,7 @@ var dat = [
         ["     ", "     ", "     ", "/---\\", "   \\|", "/---|", "\\--/|", "     ", "     ", "     ", "     "],
         ["/-\\", "\\-/", "   ", "|-|", "|-|", "|-|", "|-|", "   ", "   ", "   ", "   "],
         ["|-|", "|-|", "|-|", "|-|", "|-|", "|-|", "|-|", "   ", "   ", "   ", "   "],
-        ["        ", "        ", "        ", "/---\\|-|", "|   || |", "|   || |", "\\---/| |", "     | |", "/----/ /", "\\-----/ ", ""],
+        ["        ", "        ", "        ", "/---\\|-|", "|/ \\|| |", "|\\ /|| |", "\\---/| |", "     | |", "/----/ /", "\\-----/ ", ""],
         ["     ", "     ", "     ", "/---\\", "|/   ", "|\\   ", "\\---/", "     ", "     ", "     ", "     "],
         ["          ", " /------\\ ", "/        \\", "|  /---\\ |", "|     \\| |", "|  /---| |", "|  \\--/\\-/", "\\         ", " \\------/ ", "          ", "          "]
     ];
@@ -92,12 +100,20 @@ var dat = [
         10, 10, 12, 18, 16, 9, 13, 14, 15, 1, 17, 6, 9,
     ];
 
+    var first_type_times = [400, 300, 200, 175, 150, 100, 75, 55, 85];
+
     function update(c) {
         if (c < seq.length) {
             put_hole(sel, dat[seq[c]]);
             put_hole(sel, dat[0]);
             c++;
-            setTimeout(function (){update(c)}, 35 + (Math.random() * 75));
+            if (c < first_type_times.length) {
+                var delay = first_type_times[c];
+            }
+            else {
+                var delay = 35 + (Math.random() * 85);
+            }
+            setTimeout(function (){update(c)}, delay);
         }
         else {
             setTimeout(function (){
@@ -110,5 +126,4 @@ var dat = [
 
 </script>
 
-
-{% endblock body %}
+{% endblock scripts %}

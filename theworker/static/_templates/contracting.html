@@ -1,23 +1,34 @@
 {% extends "basepage.html" %}
 
+
+{% macro testimonial(txt, auth, dir='left', hdir='left') %}
+    {{ capped_panel("""
+        <div class='clearfix'>
+        <div class='testimonial-{0} hidden-{1}' style='margin-bottom: 0; padding-bottom: 0;'>
+            <h5>
+            &quot;{2}&quot;
+            </h5>
+            <i><span class='testimonial-quote'><br>&ndash; {3}</span></i>
+        </div>
+        </div>
+    """.format(dir, hdir, txt, auth))}}
+{% endmacro %}
+
 {% set current_page = "contracting.html" %}
 
 
 {% block banner %}
 
-    {{ banner_header('Contracting', 'My expertise is for hire.') }}
+    {{ banner_header('Contracting', 'Do you need?') }}
 
 {% endblock banner %}
 
 {% block body %}
 
-<div class='content-width-capped'>
+<div class='banner-spacer'></div>
 
-<h1>
-Do you need?
-</h1>
-
-</div>
+{{ testimonial("William's user-friendly programs make my job easier.",
+"Alex F., Systems Engineer, Crown Equipment Corporation", 'center') }}
 
 {{ banner_blurb(
     'Software that Works',
@@ -47,4 +58,33 @@ Do you need?
     'purple',
     'right') }}
 
+{{ capped_panel("""
+    <h1>
+    People Say...
+    </h1>
+""")}}
+
+{{ testimonial("Will's work led directly to automating half
+our regression testing, saving us man-hours and money.",
+"Paul C., Project Engineer - Embedded Software, S&amp;C Electric Company") }}
+
+{{ testimonial("I'm impressed by Will's attention to detail, wide comprehension,
+and fast-paced work.",
+"Vern S., Project Engineer - Systems, Crown Equipment Corporation", 'right', 'right') }}
+
+{{ capped_panel("""
+<h1>
+Interested in what I can do for you?
+</h1>
+<p>
+Well then, <a href='contact.html'>get in touch</a>.
+""")}}
+</p>
+
 {% endblock body %}
+
+{% block scripts %}
+
+<script src='scripts/scroll-show.js'></script>
+
+{% endblock scripts %}

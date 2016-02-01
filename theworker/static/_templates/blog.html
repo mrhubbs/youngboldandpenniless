@@ -4,7 +4,7 @@
 
 {% block banner %}
 
-    {{ banner_header('Blog', 'Musings of a technical nature.') }}
+    {{ banner_header('Blog', 'Musings of a technical nature') }}
 
 {% endblock banner %}
 
@@ -18,6 +18,10 @@
 </p>
 </div>
 
+{% endblock body %}
+
+{% block scripts %}
+
 <script>
 
 setTimeout(function() {
@@ -26,4 +30,4 @@ setTimeout(function() {
 
 </script>
 
-{% endblock body %}
+{% endblock scripts %}

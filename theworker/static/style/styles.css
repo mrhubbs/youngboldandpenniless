@@ -67,33 +67,26 @@ body {
 * {
   box-sizing: border-box;
 }
-.content-width-capped,
-.content-width-capped-extra {
-  max-width: 875px;
-  min-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-.content-width-capped-extra {
-  max-width: 700px;
+.clearfix:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
 }
 .lead {
   font-size: 20px;
   margin-bottom: .85rem;
 }
 .section-header {
-  border-bottom: 1px solid #eee;
-}
-.page-header {
-  font-size: 4rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.48);
 }
 .heading,
 h1,
 h2,
 h3,
 h4,
+h5,
+h6,
 .about-site-name {
   margin-top: 0;
   line-height: 1.1;
@@ -107,17 +100,17 @@ h4,
   margin-bottom: 0;
   font-size: 20px;
 }
-.empty-content {
-  width: 400px;
-  height: 45vh;
-  text-align: center;
-  font-weight: bolder;
-  font-size: 20px;
-  color: #656464;
+.content-width-capped,
+.content-width-capped-extra {
+  max-width: 875px;
+  min-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
-.empty-content p {
-  position: relative;
-  top: 50%;
+.content-width-capped-extra {
+  max-width: 670px;
 }
 h1,
 .about-site-name,
@@ -133,12 +126,32 @@ h3 {
 h4 {
   font-size: 1.5rem;
 }
+h5 {
+  font-size: 1.25rem;
+}
+h6 {
+  font-size: 1rem;
+}
 .copyright {
   font-size: 20px;
   margin-top: .75em;
   margin-bottom: .75em;
+  text-align: center;
+}
+.empty-content {
+  width: 400px;
+  height: 45vh;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 20px;
+  color: #656464;
+}
+.empty-content > p {
+  position: relative;
+  top: 50%;
 }
 .about-site-header {
+  position: relative;
   height: 60vh;
   min-height: 300px;
   max-height: 800px;
@@ -148,19 +161,80 @@ h4 {
   background: rgba(33, 149, 14, 0.7);
 }
 .about-welcome {
-  position: relative;
-  left: 7%;
-  top: 7%;
-  display: block;
+  position: absolute;
+  left: 5%;
+  top: 5%;
   width: inherit;
   font-style: oblique;
   font-size: 1rem;
 }
 .about-site-name {
   position: relative;
-  top: 15%;
+  top: 20%;
   font-size: 4rem;
   font-weight: bolder;
+}
+.about-icon-container {
+  position: absolute;
+  height: 49%;
+  left: 50%;
+  top: 35%;
+  width: 100%;
+  margin-left: -50%;
+  padding-top: 4%;
+  padding-bottom: 3%;
+}
+.about-icon {
+  height: 100%;
+}
+.about-contents {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  width: 100%;
+  margin-left: -50%;
+}
+.hidden,
+.hidden-left {
+  opacity: 0.0;
+  transform: translate(-30%, 0);
+}
+.hidden-right {
+  opacity: 0.0;
+  transform: translate(30%, 0);
+}
+.unhide {
+  opacity: 1.0;
+  transform: translate(0, 0);
+  transition: 0.33s ease-in-out;
+}
+.testimonial,
+.testimonial-right,
+.testimonial-left,
+.testimonial-center {
+  position: relative;
+  max-width: 65%;
+  line-height: 1em;
+}
+.testimonial-right {
+  text-align: right;
+  float: right;
+}
+.testimonial-left {
+  text-align: left;
+  float: left;
+}
+.testimonial-center {
+  text-align: center;
+}
+.testimonial-quote {
+  font-size: .82rem;
+  line-height: .5em;
+}
+.panel {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: rgba(237, 160, 19, 0.34);
 }
 .notice-warning {
   background: #fdfa6d;
@@ -182,6 +256,20 @@ h4 {
   background-color: rgba(33, 149, 14, 0.7);
   padding: 10px;
 }
+.banner > div > p,
+.banner .banner-blurb > p,
+.banner .banner-blurb-right > p,
+.banner .banner-blurb-left > p {
+  line-height: 1.4;
+  font-size: 1.5rem;
+  margin-top: 0;
+  color: #454545;
+  text-align: center;
+}
+.banner > div > h1 {
+  font-size: 4rem;
+  text-align: center;
+}
 .banner-color-green {
   background-color: rgba(33, 149, 14, 0.57);
 }
@@ -193,12 +281,6 @@ h4 {
 }
 .banner-color-red {
   background-color: rgba(240, 96, 96, 0.57);
-}
-.banner-content {
-  line-height: 1.4;
-  font-size: 1.5rem;
-  margin-top: 0;
-  color: #454545;
 }
 .banner-blurb,
 .banner-blurb-left,

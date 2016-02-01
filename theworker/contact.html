@@ -14,11 +14,12 @@
 
 
 
+
+
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <title>The Worker &middot; Contact</title>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <link rel="stylesheet" href="static/style/styles.css" type="text/css">
 
     
@@ -30,7 +31,7 @@
     <div>
 
         <div class='content-width-capped notice-warning'>
-            Stay tuned. This site is under construction.
+            Stay tuned. This site is under construction. Mobile version coming soon.
         </div>
 
         <div class='nav-header content-width-capped'>
@@ -61,10 +62,10 @@
     
     <div class='banner'>
         <div class='content-width-capped'>
-            <h1 class='page-header'>
+            <h1>
             Contact
             </h1>
-            <p class='banner-content'>
+            <p>
             
             </p>
         </div>
@@ -76,11 +77,15 @@
         <div class='content'>
             
 
+<div class='banner-spacer'></div>
+
 <div class='content-width-capped'>
 
-    <p id='apology' style='opacity: 0.0;'>
+    <center>
+    <p id='apology' style='opacity: 0.0; font-size: .9rem;'>
     Sorry for the strange method of presenting contact info, but one must dodge spambots somehow!
     </p>
+    </center>
 
     <center class='content-width-capped' style='font-family: "Lucida Console", Monaco, monospace;
     font-size: .30rem; line-height: .41rem; font-weight: bold; margin-top: 15px;'>
@@ -113,6 +118,19 @@
 
 </div>
 
+
+
+            <div class='content-width-capped copyright'>&copy; Copyright 2016. All rights reserved.
+              <br>3rd-party contents are the properties of their respective owners.</div>
+        </div>
+
+    </div>
+
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+  
+
 <script>
 
 var dat = [
@@ -132,7 +150,7 @@ var dat = [
         ["     ", "     ", "     ", "/---\\", "   \\|", "/---|", "\\--/|", "     ", "     ", "     ", "     "],
         ["/-\\", "\\-/", "   ", "|-|", "|-|", "|-|", "|-|", "   ", "   ", "   ", "   "],
         ["|-|", "|-|", "|-|", "|-|", "|-|", "|-|", "|-|", "   ", "   ", "   ", "   "],
-        ["        ", "        ", "        ", "/---\\|-|", "|   || |", "|   || |", "\\---/| |", "     | |", "/----/ /", "\\-----/ ", ""],
+        ["        ", "        ", "        ", "/---\\|-|", "|/ \\|| |", "|\\ /|| |", "\\---/| |", "     | |", "/----/ /", "\\-----/ ", ""],
         ["     ", "     ", "     ", "/---\\", "|/   ", "|\\   ", "\\---/", "     ", "     ", "     ", "     "],
         ["          ", " /------\\ ", "/        \\", "|  /---\\ |", "|     \\| |", "|  /---| |", "|  \\--/\\-/", "\\         ", " \\------/ ", "          ", "          "]
     ];
@@ -157,12 +175,20 @@ var dat = [
         10, 10, 12, 18, 16, 9, 13, 14, 15, 1, 17, 6, 9,
     ];
 
+    var first_type_times = [400, 300, 200, 175, 150, 100, 75, 55, 85];
+
     function update(c) {
         if (c < seq.length) {
             put_hole(sel, dat[seq[c]]);
             put_hole(sel, dat[0]);
             c++;
-            setTimeout(function (){update(c)}, 35 + (Math.random() * 75));
+            if (c < first_type_times.length) {
+                var delay = first_type_times[c];
+            }
+            else {
+                var delay = 35 + (Math.random() * 85);
+            }
+            setTimeout(function (){update(c)}, delay);
         }
         else {
             setTimeout(function (){
@@ -176,13 +202,5 @@ var dat = [
 </script>
 
 
-
-
-            <div class='content-width-capped copyright'>&copy; Copyright 2016. All rights reserved.</div>
-        </div>
-
-    </div>
-
-  </body>
 
 </html>

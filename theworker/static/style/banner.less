@@ -3,6 +3,28 @@
 .banner {
   background-color: @title-green;
   padding: 10px;
+
+  >div,
+  .banner-blurb,
+  .banner-blurb-right,
+  .banner-blurb-left {
+    // banner tagline, for banner and banner blurb
+    >p {
+      line-height: 1.4;
+      font-size: 1.5rem;
+      margin-top: 0;
+      color: #454545;
+      text-align:center;
+    }
+  }
+
+  >div {
+    // banner heading, not applied to banner blurb
+    >h1 {
+      font-size: 4rem;
+      text-align: center;
+    }
+  }
 }
 
 
@@ -17,14 +39,6 @@
 }
 .banner-color-red {
   background-color: @brand-red;
-}
-
-
-.banner-content {
-  line-height: 1.4;
-  font-size: 1.5rem;
-  margin-top: 0;
-  color: #454545;
 }
 
 

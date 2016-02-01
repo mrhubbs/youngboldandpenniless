@@ -1,5 +1,7 @@
 
 .about-site-header {
+  position: relative;
+
   height: 60vh;
   min-height: 300px;
   max-height: 800px;
@@ -13,10 +15,9 @@
 
 
 .about-welcome {
-  position: relative;
-  left: 7%;
-  top: 7%;
-  display: block;
+  position: absolute;
+  left: 5%;
+  top: 5%;
   width: inherit;
 
   font-style: oblique;
@@ -27,8 +28,34 @@
 .about-site-name {
   &:extend(h1);
   position: relative;
-  top: 15%;
+  top: 20%;
 
   font-size: 4rem;
   font-weight: bolder;
+}
+
+
+.about-icon-container {
+  position: absolute;
+  height: 49%;
+  left: 50%;
+  top: 35%;
+  width: 100%;
+  margin-left: -50%;
+  padding-top: 4%;
+  padding-bottom: 3%;
+}
+
+
+.about-icon {
+  height: 100%;
+}
+
+
+.about-contents {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  width: 100%;
+  margin-left: -50%;
 }
