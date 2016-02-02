@@ -36,7 +36,7 @@
 {% endmacro %}
 
 
-{% macro button_link(text, url, dir='') %}
+{% macro button_link(text, url, dir='', new_tab=True) %}
   {% if dir == 'left' %}
     {% set cls = 'button-link-left' %}
   {% elif dir == 'right' %}
@@ -45,7 +45,11 @@
     {% set cls = 'button-link' %}
   {% endif %}
 
-  <a href='{{ url }}' class='{{ cls }}' target='_blank'>{{ text }}</a>
+  {% if new_tab %}
+    <a href='{{ url }}' class='{{ cls }}' target='_blank'>{{ text }}</a>
+  {% else %}
+    <a href='{{ url }}' class='{{ cls }}'>{{ text }}</a>
+  {% endif %}
 {% endmacro %}
 
 
