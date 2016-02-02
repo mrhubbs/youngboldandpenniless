@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 
 
-{% macro nav_item(title, url, dir='left') %}
-    <a class='nav-item-{{dir}} {{"nav-item-active" if current_page == url}}' href={{url}}>{{title}}</a>
+{% set page_title = 'Young, Bold, and Penniless' %}
+
+
+{% macro header_nav_item(title, url) %}
+    <li class='{{"active" if page_name == url}}'><a href='{{ url }}'>{{ title }}</a></li>
 {% endmacro %}
 
 
@@ -12,7 +15,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Young, Bold, and Penniless</title>
+    <title>{{ page_title }}</title>
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -30,54 +33,27 @@
 
     <div class='container'>
       <ul class='nav nav-pills pull-left'>
-        <li><a href='about-us.html'>About us</a></li>
-        <li><a href='about-site.html'>About this site</a></li>
+        {{ header_nav_item('Home', 'homepage.html') }}
+        {{ header_nav_item('About us', 'about-us.html') }}
+        {{ header_nav_item('About this site', 'about-site.html') }}
       </ul>
       <ul class='nav nav-pills pull-right'>
-        <li><a>Search</a></li>
+        {{ header_nav_item('Blog', 'blog.html') }}
       </ul>
     </div>
 
-    <div class='jumbotron banner'>
-      <div class='banner-site-title'>
-        YOUNG, BOLD, AND PENNILESS
-      </div>
-    </div>
+    {% block body %}
+
+    {% endblock body %}
 
     <div class='container'>
-      <div class='row site-mantra well'>
-        Let us boldly stride into the future,
-        dependent on the Lord's love and
-        living as He intends us to live.
-      </div>
-
       <div class='row'>
-        <div class='col-md-4 col-md-offset-1 content-box' style='background: #ffaaaa;'>
-          <h1>RECENT POSTS</h1>
-
-          <div class='post-as-link'>How to...</div>
-
-          <div class='post-as-link'>Why you should...</div>
-        </div>
-        <div class='col-md-4 col-md-offset-2 content-box' style='background: #aaffaa;'>
-          <h1>POST CATEGORIES</h1>
-
-          <div class='post-as-link'>Recipes</div>
-
-          <div class='post-as-link'>Spirituality</div>
-        </div>
-      </div>
-
-      <div class='row text-center footnote'>
+        <div class='col-sm-8 col-sm-offset-2 text-center footnote'>
           Website designed by William &amp; Chloe &ndash; built by <a href='http://theworker.youngboldandpenniless.com' target='_blank'>The Worker</a>.
           <br>&copy; Copyright 2016. All rights reserved. 3rd-party contents are the properties of their respective owners.
+        </div>
       </div>
-
     </div>
-
-      {% block body %}
-
-      {% endblock body %}
 
   </body>
 

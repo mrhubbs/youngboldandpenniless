@@ -33,7 +33,8 @@
   font-weight: bold;
 }
 .footnote {
-  margin: 20px auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
   font-style: oblique;
 }
 .post-as-link {
