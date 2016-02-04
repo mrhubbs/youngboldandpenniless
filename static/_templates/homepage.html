@@ -1,35 +1,51 @@
 {% extends "basepage.html" %}
 
 
+{% macro post_as_link(title) %}
+  <div class='well post-as-link'><a>{{ title }}</a></div>
+{% endmacro %}
+
 {% block body %}
 
   <div class='jumbotron banner'>
+    <div class='banner-sizer'></div>
     <div class='banner-site-title'>
     YOUNG, BOLD, AND PENNILESS
     </div>
   </div>
 
   <div class='container'>
-    <div class='row site-mantra well'>
-    Let us boldly stride into the future,
-    dependent on the Lord's love and
-    living as He intends us to live.
+    <div class='row'>
+      <div class='col-md-10 col-md-offset-1'>
+        <div class='row site-mantra well'>
+        Let us boldly stride into the future,
+        dependent on the Lord's love and
+        living as He intends us to live.
+        </div>
+      </div>
     </div>
 
     <div class='row'>
-      <div class='col-md-4 col-md-offset-1 content-box' style='background: #ffaaaa;'>
+      <div class='col-md-4 col-md-offset-1 content-box'>
         <h1>RECENT POSTS</h1>
 
-        <div class='post-as-link'>How to...</div>
-
-        <div class='post-as-link'>Why you should...</div>
+        {{ post_as_link('How to...') }}
+        {{ post_as_link('Why you should...') }}
       </div>
-      <div class='col-md-4 col-md-offset-2 content-box' style='background: #aaffaa;'>
+      <div class='col-md-4 col-md-offset-2 content-box'>
         <h1>POST CATEGORIES</h1>
 
-        <div class='post-as-link'>Recipes</div>
+        <!-- <div class='container-fluid'> -->
+          <div class='row'>
+            <div class='col-sm-6'>
+              {{ post_as_link('Recipes') }}
+            </div>
 
-        <div class='post-as-link'>Spirituality</div>
+            <div class='col-sm-6'>
+              {{ post_as_link('Spirituality') }}
+            </div>
+          </div>
+        <!-- </div> -->
       </div>
     </div>
 

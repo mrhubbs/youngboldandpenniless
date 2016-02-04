@@ -1,3 +1,20 @@
+/* Roboto Slab */
+@font-face {
+  font-family: "Roboto Slab";
+  src: url('../fonts/robotoslab/RobotoSlab-Regular.ttf'), url('../fonts/robotoslab/RobotoSlab-Regular.eot');/* IE */
+}
+/* Ubuntu */
+@font-face {
+  font-family: "Ubuntu";
+  src: url('../fonts/ubuntu/Ubuntu-Regular.ttf'), url('../fonts/ubuntu/Ubuntu-Regular.eot');/* IE */
+}
+/* Lobster */
+/* Alegreya */
+/* Lato */
+@font-face {
+  font-family: "Lato";
+  src: url('../fonts/lato/Lato-Regular.ttf'), url('../fonts/lato/Lato-Regular.eot');/* IE */
+}
 .site-center-column {
   max-width: 900px;
   margin: 0 auto;
@@ -10,24 +27,33 @@
   margin: 0 auto;
   padding: 180px 20px;
 }
+.banner-sizer {
+  height: 50vh;
+  max-height: 400px;
+}
 .banner-site-title {
   max-width: 900px;
   padding: 10px 20px;
-  margin: 400px auto 0 auto;
+  margin: 0 auto 0 auto;
   background: rgba(224, 224, 224, 0.67);
   border: 1px solid rgba(98, 98, 98, 0.89);
+  font-family: "Roboto Slab";
   font-weight: bold;
+  font-style: normal;
   text-align: center;
   font-size: 3rem;
 }
 .site-mantra {
   text-align: center;
   font-size: 2.0rem;
+  font-family: "Alegreya";
+  font-weight: bold;
 }
 .content-box {
   padding: 10px auto;
 }
 .content-box h1 {
+  font-family: "Roboto Slab";
   text-align: center;
   font-size: 2.5rem;
   font-weight: bold;
@@ -37,12 +63,20 @@
   margin-bottom: 2em;
   font-style: oblique;
 }
+.nav-item {
+  font-family: "Ubuntu";
+  color: #333;
+  font-size: 1.7rem;
+}
 .post-as-link {
+  font-family: "Ubuntu";
   font-weight: bold;
   text-align: left;
   font-size: 2rem;
   margin: 7px auto;
+  margin-left: 0;
 }
-.post-as-link:hover {
-  text-decoration: underline;
+.about-page {
+  font-size: 1.8rem;
+  font-family: "Ubuntu";
 }
