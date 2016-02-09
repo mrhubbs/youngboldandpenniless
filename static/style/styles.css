@@ -6,17 +6,17 @@
   src: url('../fonts/used/foxinthesnow/FoxInTheSnow.ttf'), url('../fonts/used/foxinthesnow/FoxInTheSnow.eot');/* IE */
 }
 .banner {
-  background: #000000 url('../images/homepage-bg-md.jpg') center center no-repeat;
+  background: #dedede url('../images/homepage-bg-md.jpg') center center no-repeat;
   background-size: cover;
 }
 @media screen and (max-width: 768px) {
   .banner {
-    background: #000000 url('../images/homepage-bg-sm.jpg') center center no-repeat;
+    background: #dedede url('../images/homepage-bg-sm.jpg') center center no-repeat;
   }
 }
 @media screen and (min-width: 992px) {
   .banner {
-    background: #000000 url('../images/homepage-bg-lg.jpg') center center no-repeat;
+    background: #dedede url('../images/homepage-bg-lg.jpg') center center no-repeat;
   }
 }
 .banner-site-title {
