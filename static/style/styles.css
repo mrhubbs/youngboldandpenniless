@@ -1,62 +1,71 @@
 /* Roboto Slab */
-@font-face {
-  font-family: "Roboto Slab";
-  src: url('../fonts/robotoslab/RobotoSlab-Regular.ttf'), url('../fonts/robotoslab/RobotoSlab-Regular.eot');/* IE */
-}
 /* Ubuntu */
+/* Fox In The Snow */
 @font-face {
-  font-family: "Ubuntu";
-  src: url('../fonts/ubuntu/Ubuntu-Regular.ttf'), url('../fonts/ubuntu/Ubuntu-Regular.eot');/* IE */
-}
-/* Lobster */
-/* Alegreya */
-/* Lato */
-@font-face {
-  font-family: "Lato";
-  src: url('../fonts/lato/Lato-Regular.ttf'), url('../fonts/lato/Lato-Regular.eot');/* IE */
-}
-.site-center-column {
-  max-width: 900px;
-  margin: 0 auto;
+  font-family: "Fox In The Snow";
+  src: url('../fonts/used/foxinthesnow/FoxInTheSnow.ttf'), url('../fonts/used/foxinthesnow/FoxInTheSnow.eot');/* IE */
 }
 .banner {
-  background: #000000 url('../images/homepage-bg.jpg') center center no-repeat;
+  background: #000000 url('../images/homepage-bg-md.jpg') center center no-repeat;
   background-size: cover;
 }
-.banner-content {
-  margin: 0 auto;
-  padding: 180px 20px;
+@media screen and (max-width: 768px) {
+  .banner {
+    background: #000000 url('../images/homepage-bg-sm.jpg') center center no-repeat;
+  }
 }
-.banner-sizer {
-  height: 50vh;
-  max-height: 400px;
+@media screen and (min-width: 992px) {
+  .banner {
+    background: #000000 url('../images/homepage-bg-lg.jpg') center center no-repeat;
+  }
 }
 .banner-site-title {
-  max-width: 900px;
-  padding: 10px 20px;
-  margin: 0 auto 0 auto;
-  background: rgba(224, 224, 224, 0.67);
-  border: 1px solid rgba(98, 98, 98, 0.89);
-  font-family: "Roboto Slab";
+  max-width: 1200px;
+  padding: 2.5rem;
+  margin: 0 auto;
+  font-family: "Amatic SC", cursive;
   font-weight: bold;
   font-style: normal;
   text-align: center;
-  font-size: 3rem;
+  line-height: 1;
+  color: #111;
+  font-size: 7rem;
+}
+@media screen and (max-width: 768px) {
+  .banner-site-title {
+    font-size: 6rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .banner-site-title {
+    font-size: 9rem;
+  }
+}
+.homepage-sep {
+  height: 2px;
+  width: 60%;
+  max-width: 1200px;
+  background-image: linear-gradient(90deg, transparent 0%, #111111 10%, #111111 90%, transparent 100%);
 }
 .site-mantra {
   text-align: center;
-  font-size: 2.0rem;
-  font-family: "Alegreya";
+  font-size: 2.5rem;
+  font-family: "Fox In The Snow";
   font-weight: bold;
+  color: #111;
+  padding: 2.5rem;
 }
 .content-box {
+  background: rgba(0, 0, 0, 0.9);
   padding: 10px auto;
 }
 .content-box h1 {
-  font-family: "Roboto Slab";
+  font-family: "Fox In The Snow";
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 4rem;
   font-weight: bold;
+  padding: .45em;
+  margin: 0 0;
 }
 .footnote {
   margin-top: 2em;
@@ -73,8 +82,19 @@
   font-weight: bold;
   text-align: left;
   font-size: 2rem;
-  margin: 7px auto;
-  margin-left: 0;
+  margin: 0 0;
+  padding: 7px auto;
+  padding-left: 0;
+}
+.post-teaser {
+  background: rgba(12, 17, 13, 0.97);
+  color: #d2d2d2;
+  font-size: 1.8rem;
+  padding: .8em;
+  font-family: "Ubuntu";
+}
+.post-teaser div > a {
+  font-family: "Covered By Your Grace";
 }
 .about-page {
   font-size: 1.8rem;

@@ -1,60 +1,76 @@
 
 
-.site-center-column {
-  max-width: 900px;
-  margin: 0 auto;
-}
+@homepage-sep-space: 2.5rem;
 
 
 .banner {
   // background: #79c296;
-  background: rgba(0,0,0,255) url('../images/homepage-bg.jpg') center center no-repeat;
+
+  //Adapt the image size to the screen size.
+  background: rgba(0,0,0,255) url('../images/homepage-bg-md.jpg') center center no-repeat;
+  @media screen and (max-width: 768px) {
+    background: rgba(0,0,0,255) url('../images/homepage-bg-sm.jpg') center center no-repeat;
+  }
+  @media screen and (min-width: 992px) {
+    background: rgba(0,0,0,255) url('../images/homepage-bg-lg.jpg') center center no-repeat;
+  }
   background-size: cover;
 }
 
 
-.banner-content {
-  margin: 0 auto;
-  padding: 180px 20px;
-}
-
-
-.banner-sizer {
-  height: 50vh;
-  max-height: 400px;
-}
-
-
 .banner-site-title {
-  max-width: 900px;
-  padding: 10px 20px;
-  margin: 0 auto 0 auto;
+  max-width: 1200px;
+  padding: @homepage-sep-space;
+  margin: 0 auto;
 
-  background: rgba(224, 224, 224, 0.67);
-  border: 1px solid rgba(98, 98, 98, 0.89);
-
-  font-family: "Roboto Slab";
+  font-family: "Amatic SC", cursive;
   font-weight: bold;
   font-style: normal;
   text-align: center;
-  font-size: 3rem;
+  line-height: 1;
+  color: #111;
+
+  // Adapt the font size to the screen size.
+  font-size: 7rem;
+  @media screen and (max-width: 768px) {
+    font-size: 6rem;
+  }
+  @media screen and (min-width: 992px) {
+    font-size: 9rem;
+  }
+}
+
+
+.homepage-sep {
+  height: 2px;
+  width: 60%;
+  max-width: 1200px;
+  background-image: linear-gradient(90deg, transparent 0%, #111 10%, #111 90%, transparent 100%);
 }
 
 
 .site-mantra {
   text-align: center;
-  font-size: 2.0rem;
-  font-family: "Alegreya";
+  font-size: 2.5rem;
+  font-family: "Fox In The Snow";
   font-weight: bold;
+
+  color: #111;
+
+  padding: @homepage-sep-space;
 }
 
 
 .content-box {
+  background: rgba(0, 0, 0, .9);
+
   h1 {
-    font-family: "Roboto Slab";
+    font-family: "Fox In The Snow";
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 4rem;
     font-weight: bold;
+    padding: .45em;
+    margin: 0 0;
   }
 
   padding: 10px auto;
