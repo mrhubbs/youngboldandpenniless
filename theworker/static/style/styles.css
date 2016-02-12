@@ -32,7 +32,7 @@
 }
 .nav-item:hover,
 .nav-item-active {
-  background: rgba(33, 149, 14, 0.12);
+  background: rgba(121, 194, 150, 0.12);
 }
 .button-link,
 .button-link-left,
@@ -158,7 +158,7 @@ h6 {
   margin-bottom: .6em;
   border-radius: 10px;
   border: 1px solid #595858;
-  background: rgba(33, 149, 14, 0.7);
+  background: #79c296;
 }
 .about-welcome {
   position: absolute;
@@ -253,7 +253,7 @@ h6 {
   background: #dff0d8;
 }
 .banner {
-  background-color: rgba(33, 149, 14, 0.7);
+  background-color: #79c296;
   padding: 10px;
 }
 .banner > div > p,
