@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+"""Young, Bold, and Penniless website builder."""
 
 
 import os
@@ -6,7 +6,16 @@ from jinja2 import Environment, FileSystemLoader
 
 
 class YBPBuilder(object):
+    """Young, Bold, and Penniless website builder.
+
+    This object contains the functionality and logic to build the templates
+    into the static site.
+
+    There are a few intricacies, such as blah blah blah....
+    """
+
     def __init__(self, base_path, template_path):
+        """Initialize."""
         self.base_path = os.path.abspath(base_path)
         self.template_path = os.path.abspath(template_path)
 
@@ -17,6 +26,7 @@ class YBPBuilder(object):
         )
 
     def render_template(self, template_fname, context):
+        """Render the given template, using the Jinja engine."""
         return self.template_environment.get_template(
             template_fname
         ).render(context)
@@ -32,6 +42,7 @@ class YBPBuilder(object):
         return ignore
 
     def build(self):
+        """Build all the templates."""
         ignore = self._build_ignore()
         for f in os.listdir(self.template_path):
             if not f.endswith('.html') or f in ignore:
