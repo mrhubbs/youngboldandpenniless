@@ -5,6 +5,25 @@
   font-family: "Fox In The Snow";
   src: url('../fonts/used/foxinthesnow/FoxInTheSnow.ttf'), url('../fonts/used/foxinthesnow/FoxInTheSnow.eot');/* IE */
 }
+.post-as-link {
+  font-family: "Ubuntu";
+  font-weight: bold;
+  text-align: left;
+  font-size: 2rem;
+  margin: 0 0;
+  padding: 7px auto;
+  padding-left: 0;
+}
+.post-teaser {
+  background: rgba(12, 17, 13, 0.97);
+  color: #d2d2d2;
+  font-size: 1.8rem;
+  padding: .8em;
+  font-family: "Ubuntu";
+}
+.post-teaser div > a {
+  font-family: "Covered By Your Grace";
+}
 .banner {
   background: #dedede url('../images/homepage-bg-md.jpg') center center no-repeat;
   background-size: cover;
@@ -72,31 +91,12 @@
   margin-bottom: 2em;
   font-style: oblique;
 }
+.about-page {
+  font-size: 1.8rem;
+  font-family: "Ubuntu";
+}
 .nav-item {
   font-family: "Ubuntu";
   color: #333;
   font-size: 1.7rem;
-}
-.post-as-link {
-  font-family: "Ubuntu";
-  font-weight: bold;
-  text-align: left;
-  font-size: 2rem;
-  margin: 0 0;
-  padding: 7px auto;
-  padding-left: 0;
-}
-.post-teaser {
-  background: rgba(12, 17, 13, 0.97);
-  color: #d2d2d2;
-  font-size: 1.8rem;
-  padding: .8em;
-  font-family: "Ubuntu";
-}
-.post-teaser div > a {
-  font-family: "Covered By Your Grace";
-}
-.about-page {
-  font-size: 1.8rem;
-  font-family: "Ubuntu";
 }
