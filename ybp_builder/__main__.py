@@ -2,6 +2,7 @@
 
 
 import os
+import shutil
 from jinja2 import Environment, FileSystemLoader
 
 
@@ -31,29 +32,61 @@ class YBPBuilder(object):
             template_fname
         ).render(context)
 
-    def _build_ignore(self):
+    def clean(self):
+        """
+        Pre-build clean.
+
+        Currently, remove posts directory to ensure no posts deleted from
+        templates linger.
+        """
+        shutil.rmtree(os.path.join(self.base_path, 'posts'))
+
+    def _build_ignore(self, prefix_path):
         ignore = []
-        with open(os.path.join(self.template_path, 'ignore.list'), 'r') as f:
-            for fname in f.readlines():
-                fname = fname.rstrip('\n\r')
-                if fname != '':
-                    ignore.append(fname)
+        path = os.path.join(self.template_path, prefix_path)
+        path = os.path.join(path, 'ignore.list')
+
+        try:
+            with open(path, 'r') as f:
+                for fname in f.readlines():
+                    fname = fname.rstrip('\n\r')
+                    if fname != '':
+                        ignore.append(fname)
+        except IOError:
+            return []
 
         return ignore
 
-    def build(self):
+    def build(self, prefix_path=''):
         """Build all the templates."""
-        ignore = self._build_ignore()
-        for f in os.listdir(self.template_path):
+
+        work_path = os.path.join(self.template_path, prefix_path)
+        ignore = self._build_ignore(work_path)
+
+        for f in os.listdir(work_path):
+            # Build subdirectory.
+            if os.path.isdir(os.path.join(work_path, f)):
+                self.build(os.path.join(prefix_path, f))
+
             if not f.endswith('.html') or f in ignore:
                 continue
 
-            template_fpath = os.path.join(self.template_path, f)
+            # Path of the template we are rendering.
+            template_fpath = os.path.join(work_path, f)
 
             out_fname = os.path.basename(template_fpath)
-            out_fpath = os.path.join(self.base_path, out_fname)
+            out_fpath = \
+                os.path.join(
+                    os.path.join(self.base_path, prefix_path),
+                    out_fname)
 
-            print("{: <20} {{}} > {}".format(out_fname, out_fname))
+            print("{: <50} {{}} > {}".format(
+                os.path.join(prefix_path, out_fname),
+                os.path.join(prefix_path, out_fname)))
+
+            out_path = os.path.dirname(out_fpath)
+            if not os.path.exists(out_path):
+                os.makedirs(out_path)
 
             with open(out_fpath, 'w') as out_f:
                 html = self.render_template(out_fname, {'page_name': f})
@@ -63,4 +96,5 @@ class YBPBuilder(object):
 if __name__ == '__main__':
     import sys
     ybpbuilder = YBPBuilder(sys.argv[1], sys.argv[2])
+    ybpbuilder.clean()
     ybpbuilder.build()
