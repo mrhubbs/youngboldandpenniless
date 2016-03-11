@@ -21,11 +21,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
     <!-- Override with customized partial versions -->
-    <link rel='stylesheet' href='static/style/custom-bootstrap/css/bootstrap.min.css'>
-    <link rel='stylesheet' href='static/style/custom-bootstrap/css/bootstrap-theme.min.css'>
+    <link rel='stylesheet' href='/static/style/custom-bootstrap/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='/static/style/custom-bootstrap/css/bootstrap-theme.min.css'>
 
     <!-- My own styles -->
-    <link rel="stylesheet" href="static/style/styles.css" type="text/css">
+    <link rel="stylesheet" href="/static/style/styles.css" type="text/css">
 
     <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Ubuntu:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
@@ -40,11 +40,11 @@
 
     <div class='container'>
       <ul class='nav nav-pills pull-left'>
-        {{ header_nav_item('Home', 'homepage.html') }}
-        {{ header_nav_item('About us', 'about-us.html') }}
+        {{ header_nav_item('Home', '/homepage.html') }}
+        {{ header_nav_item('About us', '/about-us.html') }}
       </ul>
       <ul class='nav nav-pills pull-right'>
-        {{ header_nav_item('Blog', 'blog.html') }}
+        {{ header_nav_item('Blog', '/blog.html') }}
       </ul>
     </div>
 
