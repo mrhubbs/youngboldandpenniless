@@ -39,7 +39,9 @@ class YBPBuilder(object):
         Currently, remove posts directory to ensure no posts deleted from
         templates linger.
         """
-        shutil.rmtree(os.path.join(self.base_path, 'posts'))
+        post_path = os.path.join(self.base_path, 'posts')
+        if os.path.exists(post_path):
+            shutil.rmtree(post_path)
 
     def _build_ignore(self, prefix_path):
         ignore = []
@@ -80,17 +82,18 @@ class YBPBuilder(object):
                     os.path.join(self.base_path, prefix_path),
                     out_fname)
 
+            temp_fpath = os.path.join(prefix_path, out_fname)
             print("{: <50} {{}} > {}".format(
                 os.path.join(prefix_path, out_fname),
-                os.path.join(prefix_path, out_fname)))
+                temp_fpath))
 
             out_path = os.path.dirname(out_fpath)
             if not os.path.exists(out_path):
                 os.makedirs(out_path)
 
             with open(out_fpath, 'w') as out_f:
-                html = self.render_template(out_fname, {'page_name': f})
-                out_f.write(html)
+                html = self.render_template(temp_fpath, {'page_name': f})
+                out_f.write(html.encode('utf-8'))
 
 
 if __name__ == '__main__':
