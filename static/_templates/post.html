@@ -1,0 +1,65 @@
+{% extends "basepage.html" %}
+
+{% block body %}
+
+<br>
+
+<div class='container-fluid'>
+  <div class='row'>
+    <div class='post-body col-xs-12 col-xs-offset-0 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2'>
+
+      {% block post %}
+
+      {% endblock post %}
+
+    </div>
+
+    {% if use_ads %}
+      <!-- A column add on the right for md and lg screens -->
+      <div class='ad col-md-1 col-lg-1 hidden-xs hidden-sm'>
+        ad ad ad ad ad ad
+        ad ad ad ad ad ad
+        ad ad ad ad ad ad
+        ad ad ad ad ad ad
+        ad ad ad ad ad ad
+        ad ad ad ad ad ad
+        ad ad ad ad ad ad
+        ad ad ad ad ad ad
+        ad ad ad ad ad ad
+        ad ad ad ad ad ad
+      </div>
+    {% endif %}
+
+  </div>
+
+  {% if use_ads %}
+    <br>
+    <br>
+
+    <!-- A banner add at the bottom of the post for sm and xs screens. -->
+    <div class='row'>
+      <div class='ad col-xs-12 col-sm-10 col-sm-offset-1 hidden-md hidden-lg'>
+        ad banner ad banner
+        ad banner ad banner
+        ad banner ad banner
+        ad banner ad banner
+        ad banner ad banner
+        ad banner ad banner
+        ad banner ad banner
+        ad banner ad banner
+        ad banner ad banner
+        ad banner ad banner
+        ad banner ad banner
+      </div>
+    </div>
+  {% endif %}
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{% endblock body %}
