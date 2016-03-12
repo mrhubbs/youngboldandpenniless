@@ -5,6 +5,10 @@
   font-family: "Fox In The Snow";
   src: url('../fonts/used/foxinthesnow/FoxInTheSnow.ttf'), url('../fonts/used/foxinthesnow/FoxInTheSnow.eot');/* IE */
 }
+.post-body {
+  font-size: 1.8rem;
+  font-family: "Ubuntu";
+}
 .post-as-link {
   font-family: "Ubuntu";
   font-weight: bold;
@@ -23,6 +27,9 @@
 }
 .post-teaser div > a {
   font-family: "Covered By Your Grace";
+}
+.ad {
+  background-color: rgba(0, 87, 255, 0.54);
 }
 .banner {
   background: #dedede url('../images/homepage-bg-md.jpg') center center no-repeat;

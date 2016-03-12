@@ -92,7 +92,9 @@ class YBPBuilder(object):
                 os.makedirs(out_path)
 
             with open(out_fpath, 'w') as out_f:
-                html = self.render_template(temp_fpath, {'page_name': f})
+                html = self.render_template(
+                    temp_fpath,
+                    {'page_name': f, 'use_ads': True})
                 out_f.write(html.encode('utf-8'))
 
 
