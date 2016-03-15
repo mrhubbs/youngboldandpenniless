@@ -1,7 +1,28 @@
 
+@post-color: #2f2f2f;
+
 .post-body {
   font-size: 1.8rem;
   font-family: "Ubuntu";
+  line-height: 1.5;
+  color: @post-color;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Fox In The Snow";
+    font-weight: bold;
+    color: @post-color;
+  }
+
+  .post-title {
+    margin-bottom: .73rem;
+  }
+}
+
+.post-meta {
+  opacity: .697;
+  font-size: 1.6rem;
+  font-style: italic;
+  margin-left: 0.78rem;
 }
 
 .post-as-link {
@@ -13,10 +34,6 @@
   margin: 0 0;
   padding: 7px auto;
   padding-left: 0;
-
-  // &:hover {
-  //   text-decoration: underline;
-  // }
 }
 
 
@@ -36,4 +53,8 @@
 
 .ad {
   background-color: rgba(0, 87, 255, 0.54);
+}
+
+.sidebar {
+  margin-top: 18rem;
 }

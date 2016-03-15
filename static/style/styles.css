@@ -8,6 +8,27 @@
 .post-body {
   font-size: 1.8rem;
   font-family: "Ubuntu";
+  line-height: 1.5;
+  color: #2f2f2f;
+}
+.post-body h1,
+.post-body h2,
+.post-body h3,
+.post-body h4,
+.post-body h5,
+.post-body h6 {
+  font-family: "Fox In The Snow";
+  font-weight: bold;
+  color: #2f2f2f;
+}
+.post-body .post-title {
+  margin-bottom: .73rem;
+}
+.post-meta {
+  opacity: .697;
+  font-size: 1.6rem;
+  font-style: italic;
+  margin-left: 0.78rem;
 }
 .post-as-link {
   font-family: "Ubuntu";
@@ -30,6 +51,9 @@
 }
 .ad {
   background-color: rgba(0, 87, 255, 0.54);
+}
+.sidebar {
+  margin-top: 18rem;
 }
 .banner {
   background: #dedede url('../images/homepage-bg-md.jpg') center center no-repeat;
