@@ -1,26 +1,58 @@
 {% extends "basepage.html" %}
 
+
+{% macro post_sizing() %}
+  col-xs-12 col-xs-offset-0 col-sm-12 col-sm-offset-0 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2
+{% endmacro %}
+
+{% macro tag(t) %}
+  <a class='post-as-link' href='/posts/tags/{{t}}.html'>&gt;{{ t }}&nbsp;&nbsp;&nbsp;&nbsp;</a>
+{% endmacro %}
+
 {% block body %}
 
 <br>
 
-<div class='container-fluid'>
+<div class='container'>
   <div class='row'>
-    <div class='post-body col-xs-12 col-xs-offset-0 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2'>
+    <!-- fluid -->
+    <!-- <div class='post-body col-xs-12 col-xs-offset-0 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2'> -->
+    <!-- non-fluid -->
+    <div class='post-body {{ post_sizing() }}'>
 
+      <!-- post header -->
+      <h1 class='post-title'>{{ title }}</h1>
+      <div class='post-meta'>
+        {{ date.weekday_name }}, {{ date.month_name }} {{ date.day }}{{ date.day_suffix }}, {{ date.year }} by {{ author }}
+      </div>
+      <br>
+
+      <!-- post body -->
       {% block post %}
 
       {% endblock post %}
+<!--
+      <div class='hidden-sm hidden-md hidden-lg'>
+        xs
+      </div>
+      <div class='hidden-xs hidden-md hidden-lg'>
+        sm
+      </div>
+      <div class='hidden-xs hidden-sm hidden-lg'>
+        md
+      </div>
+      <div class='hidden-xs hidden-sm hidden-md'>
+        lg
+      </div> -->
+
+      <!-- some spacing -->
+      <br>
 
     </div>
 
-    {% if use_ads %}
-      <!-- A column add on the right for md and lg screens -->
-      <div class='ad col-md-1 col-lg-1 hidden-xs hidden-sm'>
-        ad ad ad ad ad ad
-        ad ad ad ad ad ad
-        ad ad ad ad ad ad
-        ad ad ad ad ad ad
+    {% if not disable_ads %}
+      <!-- A column add on the right for lg screens -->
+      <div class='ad sidebar col-lg-1 hidden-xs hidden-sm hidden-md'>
         ad ad ad ad ad ad
         ad ad ad ad ad ad
         ad ad ad ad ad ad
@@ -32,13 +64,11 @@
 
   </div>
 
-  {% if use_ads %}
-    <br>
-    <br>
-
-    <!-- A banner add at the bottom of the post for sm and xs screens. -->
-    <div class='row'>
-      <div class='ad col-xs-12 col-sm-10 col-sm-offset-1 hidden-md hidden-lg'>
+  <!-- banner add, if using ads and screen is small enough -->
+  {% if not disable_ads %}
+    <div class='row hidden-lg'>
+      <!-- A banner add at the bottom of the post for md, sm, xs screens. -->
+      <div class='ad {{ post_sizing() }}'>
         ad banner ad banner
         ad banner ad banner
         ad banner ad banner
@@ -51,6 +81,33 @@
         ad banner ad banner
         ad banner ad banner
       </div>
+
+      <br>&nbsp;
+    </div>
+  {% endif %}
+
+  <!-- post tags -->
+  <div class='row'>
+    <div class='{{ post_sizing() }}'>
+      {% for t in tags %}
+        {{ tag(t) }}
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- post comments -->
+  {% if not disable_comments %}
+    <div class=' {{ post_sizing() }}'>
+      <br>
+      <br>
+
+      Comments!
+    </div>
+  {% else %}
+    <div class=' {{ post_sizing() }}'>
+      <br>
+      <br>
+      Comments are disable for this post.
     </div>
   {% endif %}
 
