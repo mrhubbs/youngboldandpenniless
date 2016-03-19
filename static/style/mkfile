@@ -1,0 +1,31 @@
+# 3/17/16
+# This mkfile is responsible for updating stylesheets.
+
+
+STYLES=\
+    fonts.css\
+    posts.css\
+    homepage.css\
+    about.css\
+    nav.css\
+
+
+styles:V: styles.css
+
+
+%.css:QD: %.less
+    echo -e "\e[1;92mCompiling $target ...\e[0m"
+    lessc $stem.less > $target
+
+
+styles.css:QD: $STYLES
+    echo -e "\e[1;94mCreating $target ...\e[0m"
+    cat $prereq > $target
+
+
+clean:V:
+    rm -f $STYLES
+
+
+purge:V:
+    rm -f $STYLES styles.css
