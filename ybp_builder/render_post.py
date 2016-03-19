@@ -23,7 +23,7 @@ class PostError(Exception):
 
 def process_tag(tag):
     tag = PostMetadata.clean_meta(tag)
-    tag = tag.replace(' ', '-')
+    tag = tag.replace(' ', '-').lower()
     return tag
 
 
@@ -40,6 +40,7 @@ def parse_metadata(post):
         'author':           u'',
         'disable_ads':      u'False',
         'disable_comments': u'False',
+        'tags':             [],
     }
     required_meta = ['title', 'date']
 
@@ -104,7 +105,7 @@ def process_markdown(md):
 
 def process_html(html, context):
     # append and pre-pend template directives to HTML
-    html = '{% extends "post.html" %}\n{% block post %}\n' + html + \
+    html = '{% extends "post.jinja" %}\n{% block post %}\n' + html + \
         '\n{% endblock post %}'
 
     templ = template_environment.from_string(html)
@@ -118,8 +119,8 @@ def render_post(in_path, out_path):
     template.
     """
     abs_in_path = os.path.abspath(in_path)
-    url_stub = abs_in_path.split('_templates')[1]
-    url = 'http://www.youngboldandpenniless.com/blog/' + url_stub
+    url_stub = abs_in_path.split('_templates')[1][:-2] + 'html'
+    url = 'http://www.youngboldandpenniless.com' + url_stub
 
     with open(in_path, 'r') as in_f:
         # read file contents and decode to unicode
@@ -128,8 +129,13 @@ def render_post(in_path, out_path):
         meta, html = process_markdown(md)
         meta['url'] = url
         meta['identifier'] = url_stub
-        print(meta)
         html = process_html(html, meta)
+
+        # print(meta)
+
+        out_path_dir = os.path.dirname(out_path)
+        if not os.path.exists(out_path_dir):
+            os.makedirs(out_path_dir)
 
         with open(out_path, 'w') as out_f:
             out_f.write(html.encode('utf-8'))

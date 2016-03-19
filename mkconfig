@@ -1,0 +1,23 @@
+
+
+BASE_PATH=`pwd`
+STATIC_PATH=./static
+STYLE_PATH=$STATIC_PATH/style
+TEMPLATE_PATH=$STATIC_PATH/_templates
+
+
+MK=/usr/lib/plan9/bin/mk
+YBP=python -m ybp_builder
+
+
+%.html:QD: $TEMPLATE_PATH/%.jinja
+    # extract the base template this target depends on, ignoring the core dependencies
+    SRC=$stem.jinja
+    echo -e "\e[1;92mProcessing template $SRC > $target ...\e[0m"
+    $YBP.render_html $TEMPLATE_PATH $SRC $target
+
+
+%.html:QD: $TEMPLATE_PATH/%.md
+    SRC=$TEMPLATE_PATH/$stem.md
+    echo -e "\e[1;92mProcessing markdown $SRC > $target ...\e[0m"
+    $YBP.render_post $SRC $target
