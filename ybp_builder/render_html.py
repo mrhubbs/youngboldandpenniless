@@ -3,6 +3,8 @@
 
 from jinja2 import Environment, FileSystemLoader
 
+import posts
+
 
 def render_template(template_path, template_fname, context):
     """Render the given template, using the Jinja engine."""
@@ -21,5 +23,5 @@ if __name__ == '__main__':
     import sys
 
     with open(sys.argv[3], 'w') as out_file:
-        html = render_template(sys.argv[1], sys.argv[2], {})
+        html = render_template(sys.argv[1], sys.argv[2], {'post_mod': posts})
         out_file.write(html.encode('utf-8'))

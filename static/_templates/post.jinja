@@ -1,9 +1,6 @@
 {% extends "basepage.jinja" %}
 
-
-{% macro post_sizing() %}
-  col-xs-12 col-xs-offset-0 col-sm-12 col-sm-offset-0 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2
-{% endmacro %}
+{% import "post_common.jinja" as post_common %}
 
 {% macro tag(t) %}
   <a class='post-as-link' href='/posts/tags/{{t}}.html'>&gt;{{ t }}&nbsp;&nbsp;&nbsp;&nbsp;</a>
@@ -18,13 +15,11 @@
     <!-- fluid -->
     <!-- <div class='post-body col-xs-12 col-xs-offset-0 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2'> -->
     <!-- non-fluid -->
-    <div class='post-body {{ post_sizing() }}'>
+    <div class='post-body {{ post_common.post_sizing() }}'>
 
       <!-- post header -->
-      <h1 class='post-title'>{{ title }}</h1>
-      <div class='post-meta'>
-        {{ date.weekday_name }}, {{ date.month_name }} {{ date.day }}{{ date.day_suffix }}, {{ date.year }} by {{ author }}
-      </div>
+      <h1 class='post-title'>{{ post.meta['title'] }}</h1>
+      {{ post_common.post_meta(post.meta) }}
       <br>
 
       <!-- post body -->
@@ -68,7 +63,7 @@
   {% if not disable_ads %}
     <div class='row hidden-lg'>
       <!-- A banner add at the bottom of the post for md, sm, xs screens. -->
-      <div class='ad {{ post_sizing() }}'>
+      <div class='ad {{ post_common.post_sizing() }}'>
         ad banner ad banner
         ad banner ad banner
         ad banner ad banner
@@ -88,28 +83,30 @@
 
   <!-- post tags -->
   <div class='row'>
-    <div class='{{ post_sizing() }}'>
-      {% for t in tags %}
+    <div class='{{ post_common.post_sizing() }}'>
+      {% for t in post.meta['tags'] %}
         {{ tag(t) }}
       {% endfor %}
     </div>
   </div>
 
   <!-- post comments -->
+  <!--
   {% if not disable_comments %}
-    <div class=' {{ post_sizing() }}'>
+    <div class=' {{ post_common.post_sizing() }}'>
       <br>
       <br>
 
       Comments!
     </div>
   {% else %}
-    <div class=' {{ post_sizing() }}'>
+    <div class=' {{ post_common.post_sizing() }}'>
       <br>
       <br>
       Comments are disable for this post.
     </div>
   {% endif %}
+  -->
 
 </div>
 
