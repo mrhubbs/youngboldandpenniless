@@ -1,0 +1,12 @@
+{% extends "posts_list.jinja" %}
+
+
+{% block posts %}
+
+  {% for post in post_mod.sort_posts_by_date(post_mod.make_posts(post_mod.search())) %}
+
+    {{ post_common.post_teaser(post) }}
+
+  {% endfor %}
+
+{% endblock posts %}

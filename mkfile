@@ -18,10 +18,18 @@ all:QV: styles html
 <posts.mk
 
 
-html:V: homepage.html about-us.html posts
+TOP_LEVEL_PAGES=\
+    homepage.html\
+    about-us.html\
+    post-feed.html
+
+
+html:V: $TOP_LEVEL_PAGES posts
+
 
 homepage.html:D: $TEMPLATE_PATH/homepage.jinja $CORE
 about-us.html:D: $TEMPLATE_PATH/about-us.jinja $CORE
+post-feed.html:D: $TEMPLATE_PATH/post-feed.jinja $TEMPLATE_PATH/posts_list.jinja $TEMPLATE_PATH/post_common.jinja $CORE posts
 
 
 styles:VQ:

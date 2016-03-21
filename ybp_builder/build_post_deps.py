@@ -5,32 +5,10 @@ import os
 from os.path import join as path_join
 import shutil
 
+from posts import iter_post_templates
 
-post_deps = "$TEMPLATE_PATH/post.jinja $CORE"
 
-
-def iter_post_templates(work_path, path_stub='', want_ext='.md'):
-
-    res = []
-
-    for f in os.listdir(work_path):
-        fp = path_join(work_path, f)
-
-        # Build subdirectory.
-        if os.path.isdir(fp):
-            res.extend(
-                iter_post_templates(
-                    fp,
-                    path_stub=path_join(path_stub, f),
-                    want_ext=want_ext))
-            continue
-
-        if not f.endswith(want_ext) or f.lower() == 'readme.md':
-            continue
-
-        res.append(path_join(path_stub, f))
-
-    return res
+post_deps = "$TEMPLATE_PATH/post.jinja $TEMPLATE_PATH/post_common.jinja $CORE"
 
 
 def build_rules(template_path, templs):
