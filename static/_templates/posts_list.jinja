@@ -1,0 +1,19 @@
+{% extends "basepage.jinja" %}
+
+<!-- This template defines what a page that lists posts (e.g. in chrono order or by tag) looks like -->
+
+{% import "post_common.jinja" as post_common %}
+
+{% block body %}
+
+  <div class='container'>
+    <div class='row'>
+
+      {% block posts %}
+
+      {% endblock %}
+
+    </div>
+  </div>
+
+{% endblock %}
