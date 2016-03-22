@@ -28,3 +28,18 @@
   </div>
 
 {% endmacro %}
+
+
+{% macro image(src, alt, style, width='50%') %}
+  <p class='clearfix post-image'>
+    <img src='{{ src }}' alt='{{ alt }}' width='{{ width }}' style='min-width: 300px;'
+    {% if style == 'center' %}
+      class='center-block'
+    {% elif style == 'left' %}
+      class='pull-left'
+    {% else %}
+      class='pull-right'
+    {% endif %}
+    />
+  </p>
+{% endmacro %}

@@ -30,6 +30,10 @@
   font-style: italic;
   margin-left: 0.78rem;
 }
+.post-image {
+  margin-top: 2.7rem;
+  margin-bottom: 2.7rem;
+}
 .post-as-link {
   font-family: "Ubuntu";
   font-weight: bold;
