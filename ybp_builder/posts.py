@@ -9,6 +9,8 @@ from os.path import join as path_join
 import datetime
 import calendar
 
+import markdown
+
 
 class PostMetadataError(Exception):
     pass
@@ -171,7 +173,7 @@ class PostMetadata(object):
 class Post(object):
     def __init__(self, meta, text):
         self.meta = meta
-        self.text = text
+        self.text = text  # in markdown
 
     @classmethod
     def from_file(cls, fpath):
@@ -183,11 +185,30 @@ class Post(object):
             return cls(meta, text)
 
     @property
-    def blurb(self):
-        """ Return first 50 words of text. """
-        # Assumes anything separated by a space is a word
-        return u' '.join(self.text.split(' ')[:50]) + '...'
+    def blurb(self, want_html=True):
+        """
+        Return first 50 words of text.
 
+        This defaults to returning markdown processed to html.
+        """
+        # Assumes anything separated by a space is a word
+        blurb = u' '.join(self.text.split(' ')[:50]) + '...'
+
+        if want_html:
+            return self.process_markdown(blurb)
+        else:
+            return blurb
+
+    def process_markdown(self, text=None):
+        if text is None:
+            text = self.text
+
+        # 'markdown.extensions.smarty'])
+        return markdown.markdown(
+            text,
+            output_format='html5',
+            extensions=['markdown.extensions.nl2br',
+                        'markdown.extensions.sane_lists'])
 
 def iter_post_templates(work_path, path_stub='', want_ext='.md'):
     """ Recursively search given path for posts. """
