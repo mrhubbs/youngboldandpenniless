@@ -4,7 +4,6 @@
 import sys
 import os
 
-import markdown
 from jinja2 import Environment, FileSystemLoader
 
 from posts import Post
@@ -19,16 +18,6 @@ template_environment = Environment(
 
 class PostError(Exception):
     pass
-
-
-def process_markdown(post):
-
-    return markdown.markdown(
-        post.text,
-        output_format='html5',
-        extensions=['markdown.extensions.nl2br',
-                    'markdown.extensions.sane_lists',
-                    'markdown.extensions.smarty'])
 
 
 def process_html(html, context):
@@ -50,7 +39,7 @@ def render_post(in_path, out_path):
     # read file contents and decode to unicode
     post = Post.from_file(in_path)
     # process markdown
-    html = process_markdown(post)
+    html = post.process_markdown()
     html = process_html(html, {'post': post})
 
     # print(meta)
