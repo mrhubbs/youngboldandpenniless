@@ -19,7 +19,7 @@ __Ingredients__
      - a little bit of maple syrup
  - 1 teaspoon vanilla extract
  - 1/4 teaspoon salt
- - 2 whole eggs (or 1 Tbsp of gelatin mixed with 1 Tbsp of cool water then 2 Tbsp of cool water)
+ - 2 whole eggs (or 1 Tbsp of gelatin mixed with 1 Tbsp of cool water then 2 Tbsp of hot water)
  - approx. 1 ounce of chocolate (chocolate chips, chopped chocolate bar, etc.)
 
 __Instructions__

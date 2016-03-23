@@ -7,6 +7,8 @@ tags = recipes, smoothies
 
 The other day I was really craving a protein smoothie, but upon looking in our freezer, found that I was out of the frozen bananas that I generally use as a smoothie base. Usually this would deter me, but I really was craving a smoothie. I decided to just throw some stuff together (completely omitting anything frozen which I would generally never do!) and hope for the best. What I got was way beyond expectation!! It was incredibly creamy, full of yummy peanut butter, and frankly, tasted like dessert. I was amazed and instantly began dreaming of all the different ways I could use this mousse in the future! I figured I had to share the recipe so you could all enjoy it yourselves. :)
 
+{{ post_common.image("/static/images/posts/pb-mousse.jpg", "Peanut Butter Mousse in a Cup", 'center') }}
+
 Because I hadn’t been planning on sharing this recipe, I didn’t measure my ingredients, so some of the measurements may be slightly off and change the texture/taste of your mousse.
 
 __5 Minute Peanut Butter Mousse__
