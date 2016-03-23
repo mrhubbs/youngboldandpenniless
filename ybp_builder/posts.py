@@ -92,8 +92,10 @@ class PostMetadata(object):
 
     @classmethod
     def process_tag(cls, tag):
+        # TODO: make sure all characters but letters, digits, and hyphens are
+        # stripped out
         tag = cls.clean_meta(tag)
-        tag = tag.replace(' ', '-').lower()
+        tag = tag.lower()
         return tag
 
     # TODO: include post name in exceptions
