@@ -1,7 +1,22 @@
+
+{% set site_section = 'blog' %}
+{% set page_name = '/post-feed.html' %}
+
 {% extends "posts_list.jinja" %}
 
+<!-- Page that lists all posts in chronological order.
+     We don't need to posts passed to us here, we can use functions to
+     find and sort the posts. -->
 
 {% block posts %}
+
+  <!--
+  <div class='post-body {{ post_common.post_sizing() }}'>
+    <hr>
+    Posts listed in chronological order.  <a href='/post-tags.html'>Search by tag</a> instead.
+    <hr>
+  </div>
+  -->
 
   {% for post in post_mod.sort_posts_by_date(post_mod.make_posts(post_mod.search())) %}
 

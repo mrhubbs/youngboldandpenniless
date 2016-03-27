@@ -1,10 +1,10 @@
+
+{% set site_section = 'blog' %}
+
 {% extends "basepage.jinja" %}
 
 {% import "post_common.jinja" as post_common %}
 
-{% macro tag(t) %}
-  <a class='post-as-link' href='/posts/tags/{{t}}.html'>&gt;{{ t }}&nbsp;&nbsp;&nbsp;&nbsp;</a>
-{% endmacro %}
 
 {% block body %}
 
@@ -84,8 +84,8 @@
   <!-- post tags -->
   <div class='row'>
     <div class='{{ post_common.post_sizing() }}'>
-      {% for t in post.meta['tags'] %}
-        {{ tag(t) }}
+      {% for tag in post.meta['tags'] %}
+        {{ post_common.tag_link(tag, post_mod.PostMetadata.urlify_tag(tag)) }}
       {% endfor %}
     </div>
   </div>
