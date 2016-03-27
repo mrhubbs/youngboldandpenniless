@@ -21,15 +21,22 @@ all:QV: styles html
 TOP_LEVEL_PAGES=\
     homepage.html\
     about-us.html\
-    post-feed.html
+    post-feed.html\
+    post-tags.html
 
 
-html:V: $TOP_LEVEL_PAGES posts
+html:V: $TOP_LEVEL_PAGES posts tag-pages
+
+
+tag-pages:VQ: posts
+    echo -e "\e[1;94mCreating tag pages ...\e[0m"
+    $YBP.build_tags_pages
 
 
 homepage.html:D: $TEMPLATE_PATH/homepage.jinja $CORE
 about-us.html:D: $TEMPLATE_PATH/about-us.jinja $CORE
 post-feed.html:D: $TEMPLATE_PATH/post-feed.jinja $TEMPLATE_PATH/posts_list.jinja $TEMPLATE_PATH/post_common.jinja $CORE posts
+post-tags.html:D: $TEMPLATE_PATH/post-tags.jinja $TEMPLATE_PATH/posts_list.jinja $TEMPLATE_PATH/post_common.jinja $CORE posts
 
 
 styles:VQ:

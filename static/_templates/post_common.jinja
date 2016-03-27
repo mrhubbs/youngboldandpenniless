@@ -1,8 +1,6 @@
 
 
-{% macro post_sizing() %}
-  col-xs-12 col-xs-offset-0 col-sm-12 col-sm-offset-0 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2
-{% endmacro %}
+{% macro post_sizing() %}col-xs-12 col-xs-offset-0 col-sm-12 col-sm-offset-0 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2{% endmacro %}
 
 
 {% macro post_meta(meta) %}
@@ -27,6 +25,11 @@
 
   </div>
 
+{% endmacro %}
+
+
+{% macro tag_link(tag, tag_url) %}
+  <a class='post-as-link' href='/posts/tags/{{ tag_url }}.html'>{{ tag }}</a>&nbsp;&nbsp;&nbsp;&nbsp;
 {% endmacro %}
 
 
