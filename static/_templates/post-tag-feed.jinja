@@ -1,0 +1,24 @@
+
+
+{% set page_name = page_url %}
+{% extends "posts_list.jinja" %}
+
+<!-- This template defines what a page that lists all posts of a certain tag looks like.
+     We need the posts passed to us here. -->
+
+{% block blog_nav_extra %}
+
+  {{ header_nav_item(tag_name, page_url) }}
+
+{% endblock blog_nav_extra %}
+
+
+{% block posts %}
+
+  {% for post in posts %}
+
+    {{ post_common.post_teaser(post) }}
+
+  {% endfor %}
+
+{% endblock posts %}

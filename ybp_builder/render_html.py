@@ -14,6 +14,9 @@ def render_template(template_path, template_fname, context):
         trim_blocks=False
     )
 
+    # TODO: standardize this
+    context['post_mod'] = posts
+
     return template_environment.get_template(
         template_fname
     ).render(context)
@@ -23,5 +26,5 @@ if __name__ == '__main__':
     import sys
 
     with open(sys.argv[3], 'w') as out_file:
-        html = render_template(sys.argv[1], sys.argv[2], {'post_mod': posts})
+        html = render_template(sys.argv[1], sys.argv[2], {})
         out_file.write(html.encode('utf-8'))

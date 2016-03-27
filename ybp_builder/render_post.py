@@ -2,11 +2,11 @@
 
 
 import sys
-import os
 
 from jinja2 import Environment, FileSystemLoader
 
-from posts import Post
+import posts
+from posts import Post, makedirs
 
 
 template_environment = Environment(
@@ -27,6 +27,9 @@ def process_html(html, context):
 
     templ = template_environment.from_string(html)
 
+    # TODO: standardize this
+    context['post_mod'] = posts
+
     return templ.render(**context)
 
 
@@ -44,9 +47,7 @@ def render_post(in_path, out_path):
 
     # print(meta)
 
-    out_path_dir = os.path.dirname(out_path)
-    if not os.path.exists(out_path_dir):
-        os.makedirs(out_path_dir)
+    makedirs(out_path)
 
     with open(out_path, 'w') as out_f:
         out_f.write(html.encode('utf-8'))

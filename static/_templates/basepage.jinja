@@ -4,8 +4,8 @@
 {% set page_title = 'Young, Bold, and Penniless' %}
 
 
-{% macro header_nav_item(title, url) %}
-    <li class='{{"active" if page_name == url}}'><a href='{{ url }}' class='nav-item'>{{ title }}</a></li>
+{% macro header_nav_item(title, url, active=None) %}
+    <li><a href='{{ url }}' class='nav-item {{"nav-item-active" if (active == None and page_name == url) or active}}'>{{ title }}</a></li>
 {% endmacro %}
 
 
@@ -44,7 +44,7 @@
         {{ header_nav_item('About us', '/about-us.html') }}
       </ul>
       <ul class='nav nav-pills pull-right'>
-        {{ header_nav_item('Blog', '/post-feed.html') }}
+        {{ header_nav_item('Blog', '/post-feed.html', active = (site_section == 'blog')) }}
       </ul>
     </div>
 

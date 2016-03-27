@@ -8,6 +8,7 @@ import os
 from os.path import join as path_join
 import datetime
 import calendar
+import copy
 
 import markdown
 
@@ -96,7 +97,16 @@ class PostMetadata(object):
         # stripped out
         tag = cls.clean_meta(tag)
         tag = tag.lower()
+
+        if tag == 'tag' or tag == 'tags':
+            raise PostMetadataError('Tag name {} is not allowed'.format(tag))
+
         return tag
+
+    @classmethod
+    def urlify_tag(cls, tag):
+        """ Makes a tag appropriate for usage in an url. """
+        return tag.replace(' ', '-')
 
     # TODO: include post name in exceptions
     @classmethod
@@ -142,6 +152,8 @@ class PostMetadata(object):
             # process tags
             if key == 'tags':
                 val = [cls.process_tag(v) for v in val.split(',')]
+                # Convert to set and back to list to remove any duplicates.
+                val = list(set(val))
             else:
                 val.lstrip(' \t').rstrip(' \t')
 
@@ -173,9 +185,10 @@ class PostMetadata(object):
 
 
 class Post(object):
-    def __init__(self, meta, text):
+    def __init__(self, meta, text, fpath=''):
         self.meta = meta
         self.text = text  # in markdown
+        self.fpath = fpath
 
     @classmethod
     def from_file(cls, fpath):
@@ -184,7 +197,7 @@ class Post(object):
             text = post_file.read().decode('utf-8')
             meta, text = PostMetadata.parse_metadata(text, fpath)
 
-            return cls(meta, text)
+            return cls(meta, text, fpath)
 
     @property
     def blurb(self, want_html=True):
@@ -260,3 +273,32 @@ def get_date_for_sort(post):
 def sort_posts_by_date(posts):
     posts = sorted(posts, key=get_date_for_sort, reverse=True)
     return posts
+
+
+def makedirs(the_path):
+    dir_path = os.path.dirname(the_path)
+    if not os.path.exists(dir_path):
+        os.makedirs(dir_path)
+
+
+def generate_tags_mapping():
+    tags_dict = {}
+    posts = make_posts(search())
+
+    def add_post(tag, post):
+        try:
+            tags_dict[tag].append(post)
+        except KeyError:
+            # whoops, don't have an entry for that tag yet
+            tags_dict[tag] = [post]
+
+    for post in posts:
+        for tag in post.meta['tags']:
+            add_post(tag, post)
+
+    # Re-build the dict, sorting the posts in chronological order.
+    tags_dict_copy = copy.copy(tags_dict)
+    for tag, posts in tags_dict_copy.items():
+        tags_dict[tag] = sort_posts_by_date(posts)
+
+    return tags_dict

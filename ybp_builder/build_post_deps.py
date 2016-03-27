@@ -74,6 +74,8 @@ if __name__ == '__main__':
 
     # Generate data for post prune rule.
     rendered_posts = iter_post_templates('./posts/', want_ext='.html')
+    # Filter out the tag pages.
+    rendered_posts = filter(lambda x: not x.startswith('tags'), rendered_posts)
     rendered_posts_set = {c[:-5] for c in rendered_posts}
     template_posts_set = {t[:-3] for t in template_posts}
 

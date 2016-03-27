@@ -1,0 +1,27 @@
+
+{% set site_section = 'blog' %}
+{% set page_name = '/post-tags.html' %}
+
+{% extends "posts_list.jinja" %}
+
+<!-- This template defines the page that lists all tags. -->
+
+{% block posts %}
+
+  <!--
+  <div class='post-body {{ post_common.post_sizing() }}'>
+    <hr>
+    Posts by tag.  <a href='/post-feed.html'>Search by chronological order</a> instead.
+    <hr>
+  </div>
+  -->
+
+  {% for tag in post_mod.generate_tags_mapping() | sort %}
+
+    <div class=' {{ post_common.post_sizing() }}'>
+      {{ post_common.tag_link(tag, post_mod.PostMetadata.urlify_tag(tag)) }}
+    </div>
+
+  {% endfor %}
+
+{% endblock posts %}

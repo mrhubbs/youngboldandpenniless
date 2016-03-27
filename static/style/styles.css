@@ -135,3 +135,6 @@
   color: #333;
   font-size: 1.7rem;
 }
+.nav-item-active {
+  color: #69a96b;
+}
