@@ -2,7 +2,7 @@
 author = Chloe
 date = 2015-9-1
 title = The Most Delicious Real Food Oreos (Gluten-Free, Paleo, GAPS, SCD friendly)
-tags = recipes, dessert, chocolate, coconut flour, coconut oil, gaps, gluten-free, healthy, oreos, paleo, real food, scd
+tags = recipes, desserts, chocolate, coconut flour, coconut oil, gaps, gluten-free, healthy, oreos, paleo, real food, scd
 </metadata>
 
 I absolutely LOVE oreos. In the distant past of a previous life, Will would oftentimes bring me home a little surprise gift of flowers and my own personal six pack of oreos. Delish! My favorite kinds are birthday cake and any with colored cream in the middle-somehow they seem to have just the right amount of fluffiness that you don’t get with double-stuffed or regular ol’ white cream.

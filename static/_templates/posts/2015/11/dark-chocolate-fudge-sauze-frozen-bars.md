@@ -2,7 +2,7 @@
 author = William
 title = Dark Chocolate Fudge Sauce / Frozen Bars
 date = 2015-11-18
-tags = recipes, dessert
+tags = recipes, desserts
 </metadata>
 
 **Ingredients**
