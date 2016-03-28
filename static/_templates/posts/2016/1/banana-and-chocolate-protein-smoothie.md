@@ -2,7 +2,7 @@
 author = Chloe
 title = Banana & Chocolate Protein Smoothie
 date = 2016-1-30
-tags = recipes, smoothies
+tags = recipes, smoothies, chocolate, bananas, collagen, easy, gelatin, healhty, protein
 </metadata>
 
 Well, I guess our lack of posts recently shows that we are still getting the hang of blogging. As the holidays and busy season came along, our ability to throw writing into the mix was completely annihilated. Sorry about that! Hopefully we will get back on a regular schedule now that the new year is getting to be not-so-new.
