@@ -1,5 +1,5 @@
 
-@post-color: #2f2f2f;
+@import "defs.less";
 
 .post-body {
   font-size: 1.8rem;
@@ -62,4 +62,32 @@
 
 .sidebar {
   margin-top: 18rem;
+}
+
+.tag::after {
+  border-right-color: #aaa;
+
+  border-bottom: 14px solid transparent;
+  border-right: 14px solid @post-tag-color;
+  border-top: 14px solid transparent;
+  content: "";
+  height: 0;
+  left: -14px;
+  position: absolute;
+  top: 0;
+  width: 0;
+}
+
+.tag {
+  padding: 3.3px;
+  margin-right: 3.4rem;
+  margin-left: 0;
+  margin-top: 0.85rem;
+  margin-bottom: 0.85rem;
+  border-radius: 0 3px 3px 0;
+  background: @post-tag-color;
+  font-size: 15px;
+
+  display: inline-block;
+  position: relative;
 }

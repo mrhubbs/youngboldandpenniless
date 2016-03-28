@@ -8,7 +8,10 @@
 
 {% block blog_nav_extra %}
 
+  <!--
   {{ header_nav_item(tag_name, page_url) }}
+  -->
+  &nbsp;&nbsp;{{ post_common.tag_link(tag_name, post_mod.PostMetadata.urlify_tag(tag_name)) }}
 
 {% endblock blog_nav_extra %}
 
