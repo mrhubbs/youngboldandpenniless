@@ -106,6 +106,8 @@ class PostMetadata(object):
     @classmethod
     def urlify_tag(cls, tag):
         """ Makes a tag appropriate for usage in an url. """
+        # TODO: replace all non-url-legal characters.
+        tag = tag.replace("'", '')
         return tag.replace(' ', '-')
 
     # TODO: include post name in exceptions
