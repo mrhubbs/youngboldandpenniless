@@ -2,7 +2,7 @@
 date = 2016-3-13
 author = William
 title = Salted Caramel Ice Cream
-tags = recipes, desserts
+tags = recipes, desserts, ice cream
 </metadata>
 
 When experimenting with ice-cream one night, I accidentally discovered how to make a yummy salted caramel flavor.  The caramel flavor came from coconut sugar.  The salt came from salted butter I put in, in an attempt to make the ice-cream creamier.  It didn’t work, as the butter hardened into little clumps. But with the prevalence of the caramel flavor, the butter lumps tasted like caramel, not straight butter.

@@ -2,7 +2,7 @@
 author = Chloe
 title = The Pleasure of Seasonal Eating
 date = 2015-10-29
-tags = musings
+tags = musings, cheap, cheap organic, organic, god, god's abundance, god's love, local food, seasonal food
 </metadata>
 
 

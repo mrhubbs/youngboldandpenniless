@@ -2,7 +2,7 @@
 author = Chloe
 title = Will There Be Seasons in Heaven?
 date = 2015-11-16
-tags = musings
+tags = musings, autumn, catholic, death, fall, god, heaven, life, life cycle, seasons, spring, summer, theology, winter
 </metadata>
 
 The seasons are a beautiful microcosm and example of our beautiful life cycle. We all know it and have all observed it. In the spring, we have new life and tons of growth. Plants, flowers, animals. It seems that everywhere we look, the colors and blossoms of fresh and new life are to be found. The days begin to lengthen, giving us more light. The weather is fresh and warm and reinvigorates us, also, giving us a rejuvenation of life. When spring comes, we throw open our windows and air the house out, we do spring cleaning, we plant fresh gardens. All over, spring is a time of newness.
