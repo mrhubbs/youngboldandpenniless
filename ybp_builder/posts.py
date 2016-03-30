@@ -9,8 +9,10 @@ from os.path import join as path_join
 import datetime
 import calendar
 import copy
+import string
 
 import render
+from utils import CleanStringMapping
 
 
 class PostMetadataError(Exception):
@@ -49,6 +51,8 @@ class PostDate(object):
 
 
 class PostMetadata(object):
+    url_tag_keep_chars = CleanStringMapping(
+        unicode(string.letters + string.digits + '.-_'))
 
     @classmethod
     def parse_bool(cls, v):
@@ -93,8 +97,6 @@ class PostMetadata(object):
 
     @classmethod
     def process_tag(cls, tag):
-        # TODO: make sure all characters but letters, digits, and hyphens are
-        # stripped out
         tag = cls.clean_meta(tag)
         tag = tag.lower()
 
@@ -106,9 +108,13 @@ class PostMetadata(object):
     @classmethod
     def urlify_tag(cls, tag):
         """ Makes a tag appropriate for usage in an url. """
-        # TODO: replace all non-url-legal characters.
-        tag = tag.replace("'", '')
-        return tag.replace(' ', '-')
+        # Replace spaces with hyphens.
+        tag = tag.replace(' ', '-')
+
+        # Make sure all url-illegal characters are stripped out.
+        tag = tag.translate(cls.url_tag_keep_chars)
+
+        return tag
 
     # TODO: include post name in exceptions
     @classmethod
