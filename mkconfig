@@ -20,4 +20,4 @@ YBP=python -m ybp_builder
 %.html:QD: $TEMPLATE_PATH/%.md
     SRC=$TEMPLATE_PATH/$stem.md
     echo -e "\e[1;92mProcessing markdown $SRC > $target ...\e[0m"
-    $YBP.render_post $SRC $target
+    $YBP.render $SRC $target

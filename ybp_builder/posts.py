@@ -10,7 +10,7 @@ import datetime
 import calendar
 import copy
 
-import markdown
+import render
 
 
 class PostMetadataError(Exception):
@@ -220,12 +220,7 @@ class Post(object):
         if text is None:
             text = self.text
 
-        # 'markdown.extensions.smarty'])
-        return markdown.markdown(
-            text,
-            output_format='html5',
-            extensions=['markdown.extensions.nl2br',
-                        'markdown.extensions.sane_lists'])
+        return render.render_markdown(text)
 
 def iter_post_templates(work_path, path_stub='', want_ext='.md'):
     """ Recursively search given path for posts. """
