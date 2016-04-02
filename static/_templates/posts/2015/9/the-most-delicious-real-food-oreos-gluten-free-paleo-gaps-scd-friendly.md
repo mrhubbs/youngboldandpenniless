@@ -9,6 +9,8 @@ I absolutely LOVE oreos. In the distant past of a previous life, Will would ofte
 
 When we started shifting over to a real food diet (all in the span of about 1 week), the oreos obviously had to go. It wasn’t easy, but come on, those cookies don’t even have any kind of real dairy in them. Or eggs. Or anything you SHOULD find in a creamy, chocolate-y, crunchy cookie. We lived without them in our lives for about 6 months, at which time, I decided I was gonna have them in my life one way or another. At least, I was determined to find a way to make a healthy version. This is what we came up with: a softer, creamier, melt-in-your-mouth, all around better oreo.
 
+{{ post_common.image("/static/images/posts/real-food-oreo.jpg", "Real Food Oreo", 'center') }}
+
 <u>__Cookies__</u>
 1/3 cup cconut flour
 3 Tbsp. cocoa powder

@@ -9,7 +9,7 @@ My mind drifted as I lay awake in the early morning.  I thought of the stars shi
 
 This idea is not a new juxtaposition.  Function and form.  Utility and beauty.  Use and uselessness.  Beauty is, in a sense, useless.  What does it matter if my roof has ornate eaves, so long as it shelters me from the weather?  Why should I care if my shoes look classy, so long as they keep my feet in and the rest of the world out?  What does it matter if my pocket linings are burgundy, orange, pea green, teal, or beige, so long as they don’t develop holes?  Yet, I submit that beauty is essential to being human and to all human things.  I hold that function is best served when form is at its best.  As proof, I give you a flower.
 
-[img]
+{{ post_common.image("/static/images/posts/useless-flower.jpg", "Useless Flower", 'center', width='70%') }}
 
 What is more useless than this?  It’s fragile.  It’s delicate.  It will die quickly and fade away forever.  You can’t make anything out of it but an arrangement of flowers, which is good for nothing but looking at.
 
@@ -19,9 +19,11 @@ Now here is the interesting part.  You cannot separate the flower’s beauty fro
 
 It is a principle of nature that form and function ought to be balanced.  Therefore, we humans, as part of the natural world, are more human when we observe this balance.  Yet, as a society, we are continually emphasizing function over form.
 
-Here is one example:
+Consider these two pictures:
 
-[img]
+{{ post_common.image("/static/images/posts/cordless-phone-white.jpg", "Cordless Phone", "center", width="30%", caption='By Pbroks13 (Own work) [CC BY 3.0](http://creativecommons.org/licenses/by/3.0), via Wikimedia Commons') }}
+
+{{ post_common.image("/static/images/posts/Ericsson_Dialog_in_green.jpg", "Rotary Dial Phone", "center", width="56%", caption='By Diamondmagna (Own work) [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0), via Wikimedia Commons') }}
 
 The old phone is hardly a pinnacle of aesthetics, yet it is almost opulent compared to the new one.  It at least has two contrasting colors and a variety of curves and shapes.  The new phone is a study in aesthetic minimalism.  It could scarcely have less color and its subtle shapes and curves can hardly hold one’s attention.  Really.  Try looking at the new phone for a solid minute.  Then the old one for a minute.  Notice a difference?  Is one more appealing?
 
