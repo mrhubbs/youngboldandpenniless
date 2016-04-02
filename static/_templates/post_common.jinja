@@ -33,16 +33,23 @@
 {% endmacro %}
 
 
-{% macro image(src, alt, style, width='50%') %}
-  <p class='clearfix post-image'>
-    <img src='{{ src }}' alt='{{ alt }}' width='{{ width }}' style='min-width: 300px;'
-    {% if style == 'center' %}
-      class='center-block'
-    {% elif style == 'left' %}
-      class='pull-left'
-    {% else %}
-      class='pull-right'
-    {% endif %}
-    />
-  </p>
+{% macro image(src, alt, style, width='50%', caption=None) %}
+  <div class='clearfix post-image' width='100%'>
+    <div width='{{ width }}' style='min-width: 200px; max-width: {{ width }};'
+      {% if style == 'center' %}
+        class='center-block'
+      {% elif style == 'left' %}
+        class='pull-left'
+      {% else %}
+        class='pull-right'
+      {% endif %}
+    >
+
+      <img src='{{ src }}' alt='{{ alt }}' width='100%'/>
+
+      {% if caption != None %}
+        <p class='post-image-caption'>{{ caption }}</p>
+      {% endif %}
+    </div>
+  </div>
 {% endmacro %}

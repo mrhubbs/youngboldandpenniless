@@ -34,6 +34,9 @@
   margin-top: 2.7rem;
   margin-bottom: 2.7rem;
 }
+.post-image-caption {
+  font-size: 1.5rem;
+}
 .post-as-link {
   font-family: "Ubuntu";
   font-weight: bold;
