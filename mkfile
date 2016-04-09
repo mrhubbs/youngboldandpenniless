@@ -22,7 +22,8 @@ TOP_LEVEL_PAGES=\
     homepage.html\
     about-us.html\
     post-feed.html\
-    post-tags.html
+    post-tags.html\
+    privacy-policy.html\
 
 
 html:V: $TOP_LEVEL_PAGES posts tag-pages
@@ -37,6 +38,7 @@ homepage.html:D: $TEMPLATE_PATH/homepage.jinja $CORE
 about-us.html:D: $TEMPLATE_PATH/about-us.jinja $CORE
 post-feed.html:D: $TEMPLATE_PATH/post-feed.jinja $TEMPLATE_PATH/posts_list.jinja $TEMPLATE_PATH/post_common.jinja $CORE posts
 post-tags.html:D: $TEMPLATE_PATH/post-tags.jinja $TEMPLATE_PATH/posts_list.jinja $TEMPLATE_PATH/post_common.jinja $CORE posts
+privacy-policy.html:D: $TEMPLATE_PATH/privacy-policy.jinja $CORE
 
 
 styles:VQ:
