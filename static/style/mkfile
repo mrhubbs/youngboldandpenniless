@@ -6,7 +6,7 @@ STYLES=\
     fonts.css\
     posts.css\
     homepage.css\
-    about.css\
+    site-page.css\
     nav.css\
 
 
