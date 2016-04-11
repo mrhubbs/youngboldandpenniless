@@ -44,40 +44,15 @@
       <br>
 
     </div>
-
-    {% if not disable_ads %}
-      <!-- A column add on the right for lg screens -->
-      <div class='ad sidebar col-lg-1 hidden-xs hidden-sm hidden-md'>
-        ad ad ad ad ad ad
-        ad ad ad ad ad ad
-        ad ad ad ad ad ad
-        ad ad ad ad ad ad
-        ad ad ad ad ad ad
-        ad ad ad ad ad ad
-      </div>
-    {% endif %}
-
   </div>
 
-  <!-- banner add, if using ads and screen is small enough -->
+  <!-- banner add -->
   {% if not disable_ads %}
-    <div class='row hidden-lg'>
-      <!-- A banner add at the bottom of the post for md, sm, xs screens. -->
-      <div class='ad {{ post_common.post_sizing() }}'>
-        ad banner ad banner
-        ad banner ad banner
-        ad banner ad banner
-        ad banner ad banner
-        ad banner ad banner
-        ad banner ad banner
-        ad banner ad banner
-        ad banner ad banner
-        ad banner ad banner
-        ad banner ad banner
-        ad banner ad banner
+    <div class='row'>
+      <!-- A banner add at the bottom of the post for lg, md, sm, xs screens. -->
+      <div class='ad {{ post_common.post_sizing() }} text-center' width='80%' style='min-height: 80px;'>
+        banner ad
       </div>
-
-      <br>&nbsp;
     </div>
   {% endif %}
 
