@@ -228,6 +228,7 @@ class Post(object):
 
         return render.render_markdown(text)
 
+
 def iter_post_templates(work_path, path_stub='', want_ext='.md'):
     """ Recursively search given path for posts. """
 

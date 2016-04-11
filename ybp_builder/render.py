@@ -5,6 +5,7 @@ import sys
 
 from jinja2 import Environment, FileSystemLoader
 import markdown
+import htmlmin
 
 import posts
 
@@ -57,7 +58,9 @@ def process_html_for_post(html, context):
     # TODO: standardize this
     context['post_mod'] = posts
 
-    return templ.render(**context)
+    rendered = templ.render(**context)
+
+    return htmlmin.minify(rendered, remove_empty_space=True)
 
 
 if __name__ == '__main__':

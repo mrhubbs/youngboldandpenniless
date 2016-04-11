@@ -2,6 +2,7 @@
 
 
 from jinja2 import Environment, FileSystemLoader
+import htmlmin
 
 import posts
 
@@ -17,9 +18,11 @@ def render_template(template_path, template_fname, context):
     # TODO: standardize this
     context['post_mod'] = posts
 
-    return template_environment.get_template(
+    rendered = template_environment.get_template(
         template_fname
     ).render(context)
+
+    return htmlmin.minify(rendered, remove_empty_space=True)
 
 
 if __name__ == '__main__':
