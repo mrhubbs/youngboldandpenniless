@@ -3,6 +3,9 @@
 {% extends "basepage.jinja" %}
 
 
+{% import "post_common.jinja" as post_common %}
+
+
 {% macro post_as_link(title) %}
   <!-- <div class='well post-as-link'><a>{{ title }}</a></div> -->
   <div class='post-as-link'><a>{{ title }}</a></div>
@@ -47,38 +50,38 @@
         </div>
       </div>
 
+<!--
       <div style='height: 70px'></div>
+-->
 
       <br>
     </div>
   </div>
 
+  <br>
+  <br>
+  <br>
+
   <div class='container'>
-
     <div class='row'>
-      <div class='col-md-4 col-md-offset-1 content-box'>
-        <h1>Recent Posts</h1>
 
-        {{ post_as_link('How to...') }}
-        {{ post_as_link('Why you should...') }}
+      <div class='{{ post_common.post_sizing() }}'>
+        <div class='center-block text-center'>
+          <a href='/post-feed.html' class='big-button'>Click here to enter the blog</a>
+        </div>
       </div>
-      <div class='col-md-4 col-md-offset-2 content-box'>
-        <h1>Post Categories</h1>
 
-        <!-- <div class='container-fluid'> -->
-          <div class='row'>
-            <div class='col-sm-6'>
-              {{ post_as_link('Recipes') }}
-            </div>
-
-            <div class='col-sm-6'>
-              {{ post_as_link('Spirituality') }}
-            </div>
-          </div>
-        <!-- </div> -->
-      </div>
     </div>
-
   </div>
+
+  <br>
+  <br>
+  <br>
+
+  {% include "about-us-inc.jinja" %}
+
+  <br>
+  <br>
+  <br>
 
 {% endblock body %}

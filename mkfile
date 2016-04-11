@@ -20,7 +20,6 @@ all:QV: styles html
 
 TOP_LEVEL_PAGES=\
     homepage.html\
-    about-us.html\
     post-feed.html\
     post-tags.html\
     privacy-policy.html\
@@ -34,8 +33,7 @@ tag-pages:VQ: posts
     $YBP.build_tags_pages
 
 
-homepage.html:D: $TEMPLATE_PATH/homepage.jinja $CORE
-about-us.html:D: $TEMPLATE_PATH/about-us.jinja $CORE
+homepage.html:D: $TEMPLATE_PATH/homepage.jinja $TEMPLATE_PATH/about-us-inc.jinja $CORE
 post-feed.html:D: $TEMPLATE_PATH/post-feed.jinja $TEMPLATE_PATH/posts_list.jinja $TEMPLATE_PATH/post_common.jinja $CORE posts
 post-tags.html:D: $TEMPLATE_PATH/post-tags.jinja $TEMPLATE_PATH/posts_list.jinja $TEMPLATE_PATH/post_common.jinja $CORE posts
 privacy-policy.html:D: $TEMPLATE_PATH/privacy-policy.jinja $CORE

@@ -62,6 +62,7 @@
 }
 .ad {
   background-color: rgba(0, 87, 255, 0.54);
+  margin-bottom: 2.5rem;
 }
 .sidebar {
   margin-top: 18rem;
@@ -139,6 +140,35 @@
   font-weight: bold;
   color: #111;
   padding: 2.5rem;
+}
+.big-button {
+  background: #3d3a3a;
+  padding: 2rem;
+  font-size: 2.5em;
+  max-width: 90%;
+}
+@media (max-width: 767px) {
+  .big-button {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 768px) {
+  .big-button {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .big-button {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .big-button {
+    font-size: 3rem;
+  }
+}
+.big-button:hover {
+  text-decoration: none;
 }
 .content-box {
   background: rgba(0, 0, 0, 0.9);

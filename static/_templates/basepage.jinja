@@ -18,10 +18,6 @@
     <title>{{ page_title }}</title>
 
 
-    <!--
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
-  -->
     <!-- Customized Bootstrap css -->
     <link rel='stylesheet' href='/static/style/custom-bootstrap/css/bootstrap.min.css'>
     <link rel='stylesheet' href='/static/style/custom-bootstrap/css/bootstrap-theme.min.css'>
@@ -43,7 +39,6 @@
     <div class='container'>
       <ul class='nav nav-pills pull-left'>
         {{ header_nav_item('Home', '/homepage.html') }}
-        {{ header_nav_item('About us', '/about-us.html') }}
       </ul>
       <ul class='nav nav-pills pull-right'>
         {{ header_nav_item('Blog', '/post-feed.html', active = (site_section == 'blog')) }}
