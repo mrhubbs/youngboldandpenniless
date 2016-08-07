@@ -187,6 +187,11 @@
   margin-bottom: 2em;
   font-style: oblique;
 }
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
 .site-page {
   font-size: 1.8rem;
   font-family: "Ubuntu";
