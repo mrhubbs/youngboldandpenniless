@@ -47,7 +47,7 @@
   </div>
 
   <!-- banner add -->
-  {% if not disable_ads %}
+  {% if not post.meta['disable_ads'] %}
     <div class='row'>
       <!-- A banner add at the bottom of the post for lg, md, sm, xs screens. -->
       <div class='ad {{ post_common.post_sizing() }} text-center' width='80%' style='min-height: 80px;'>
