@@ -3,4 +3,8 @@
 # temporary build file
 posts.mk
 
-posts
+# generated html
+posts/*
+!posts/.placeholder
+!posts/tags/.placeholder
+*.html
