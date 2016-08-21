@@ -128,7 +128,7 @@ class PostMetadata(object):
         # Provide defaults for metadata which is not required.
         meta = {
             'author':           u'',
-            'disable_ads':      u'False',
+            'disable_ads':      u'True',
             'disable_comments': u'False',
             'tags':             [],
         }
