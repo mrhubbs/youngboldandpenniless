@@ -44,14 +44,4 @@ privacy-policy.html:D: $TEMPLATE_PATH/privacy-policy.jinja $CORE
 
 styles:VQ:
     cd $STYLE_PATH
-    $MK styles
-
-
-styles-clean:VQ:
-    cd $STYLE_PATH
-    $MK clean
-
-
-styles-purge:VQ:
-    cd $STYLE_PATH
-    $MK purge
+    compass compile

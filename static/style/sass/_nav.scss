@@ -1,5 +1,5 @@
 
-@import "defs.less";
+@import "defs";
 
 .nav-item {
   font-family: "Ubuntu";
@@ -9,5 +9,5 @@
 
 
 .nav-item-active {
-  color: @site-brand-color;
+  color: $site-brand-color;
 }

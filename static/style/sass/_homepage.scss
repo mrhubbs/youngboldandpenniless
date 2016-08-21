@@ -1,6 +1,6 @@
 
 
-@homepage-sep-space: 2.5rem;
+$homepage-sep-space: 2.5rem;
 
 
 .banner {
@@ -20,7 +20,7 @@
 
 .banner-site-title {
   max-width: 1200px;
-  padding: @homepage-sep-space;
+  padding: $homepage-sep-space;
   margin: 0 auto;
 
   font-family: "Amatic SC", cursive;
@@ -57,13 +57,13 @@
 
   color: #111;
 
-  padding: @homepage-sep-space;
+  padding: $homepage-sep-space;
 }
 
 
 .big-button {
   background: #3d3a3a;
-  padding: 2rem;
+  padding: 1rem;
   font-size: 2.5em;
   max-width: 90%;
 

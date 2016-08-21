@@ -1,16 +1,16 @@
 
-@import "defs.less";
+@import "defs";
 
 .post-body {
   font-size: 1.8rem;
   font-family: "Ubuntu";
   line-height: 1.5;
-  color: @post-color;
+  color: $post-color;
 
   h1, h2, h3, h4, h5, h6 {
     font-family: "Fox In The Snow", cursive;
     font-weight: bold;
-    color: @post-color;
+    color: $post-color;
   }
 
   .post-title {
@@ -73,7 +73,7 @@
   border-right-color: #aaa;
 
   border-bottom: 14px solid transparent;
-  border-right: 14px solid @post-tag-color;
+  border-right: 14px solid $post-tag-color;
   border-top: 14px solid transparent;
   content: "";
   height: 0;
@@ -90,7 +90,7 @@
   margin-top: 0.85rem;
   margin-bottom: 0.85rem;
   border-radius: 0 3px 3px 0;
-  background: @post-tag-color;
+  background: $post-tag-color;
   font-size: 15px;
 
   display: inline-block;
