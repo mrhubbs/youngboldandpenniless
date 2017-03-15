@@ -1,0 +1,40 @@
+---
+layout: basepage
+---
+<!-- set site_section = 'blog'  -->
+
+<!--  extends "basepage.jinja"  -->
+
+<!--  import "post_common.jinja" as post_common  -->
+
+
+<br>
+
+<div class='container'>
+  <div class='row'>
+    <!-- fluid -->
+    <!-- <div class='post-body col-xs-12 col-xs-offset-0 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2'> -->
+    <!-- non-fluid -->
+    <div class='post-body {% include page_sizing.html %}'>
+
+      <!-- post header -->
+      <h1 class='post-title'>{{ page.title}}</h1>
+      {% include post_meta.html %}
+      <br>
+
+      <!-- post body -->
+      {{ content }}
+
+      <!-- some spacing -->
+      <br>
+
+    </div>
+  </div>
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>

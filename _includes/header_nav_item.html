@@ -1,0 +1,4 @@
+<li>
+  <!-- todo: the mechanism for determing whether or not the item should be active is broken -->
+  <a href='{{ include.url }}' class='nav-item {{"nav-item-active" if (include.active == None and layout.page_name == url) or include.active}}'>{{ include.title }}</a>
+</li>
