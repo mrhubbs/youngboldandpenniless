@@ -63,11 +63,12 @@ $homepage-sep-space: 2.5rem;
 
 .big-button {
   background: #3d3a3a;
-  padding: 1rem;
+  display: inline-block;
   font-size: 2.5em;
-  max-width: 90%;
+  padding: 2rem;
+  width: 90%;
 
-  @media(max-width:767px) { font-size: 1.8rem; }
+  @media(max-width:767px) { font-size: 2.2rem; }
   @media(min-width:768px) { font-size: 2.5rem; }
   @media(min-width:992px) { font-size: 2.5rem; }
   @media(min-width:1200px) { font-size: 3rem; }

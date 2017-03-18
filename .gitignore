@@ -1,10 +1,3 @@
-*.pyc
-
-# temporary build file
-posts.mk
-
-# generated html
-posts/*
-!posts/.placeholder
-!posts/tags/.placeholder
-*.html
+# generated
+_site
+.sass-cache
