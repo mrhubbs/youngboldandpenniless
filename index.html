@@ -55,6 +55,13 @@ layout: basepage
 <a id=about-us></a>
 
 {% include about-us.html %}
+<script>
+    $('#about-us-button').click(function() {
+        $("html, body").animate({
+            scrollTop: $("#about-us").offset().top - 50
+        }, 480);
+    });
+</script>
 
 <br>
 <br>
