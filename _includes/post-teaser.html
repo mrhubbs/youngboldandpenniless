@@ -1,0 +1,14 @@
+
+<!-- A small block with post title, meta, and excerpt -->
+<div class='post-body {% include page_sizing.html %}'>
+
+  <!-- post header -->
+  <h1 class='post-title'><a href="{{ post.url }}">{{ post.title }}</a></h1>
+  {% include post-meta.html %}
+  <br>
+
+  {{ post.excerpt }}&hellip;
+
+  <hr>
+
+</div>

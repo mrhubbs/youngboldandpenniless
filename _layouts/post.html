@@ -1,12 +1,7 @@
 ---
 layout: basepage
+site_section: blog
 ---
-<!-- set site_section = 'blog'  -->
-
-<!--  extends "basepage.jinja"  -->
-
-<!--  import "post_common.jinja" as post_common  -->
-
 
 <br>
 
@@ -18,8 +13,10 @@ layout: basepage
     <div class='post-body {% include page_sizing.html %}'>
 
       <!-- post header -->
-      <h1 class='post-title'>{{ page.title}}</h1>
-      {% include post_meta.html %}
+      <h1 class='post-title'>{{ page.title }}</h1>
+      <!-- The include expects the variable 'post', so we do a simple alias -->
+      {% assign post = page %}
+      {% include post-meta.html %}
       <br>
 
       <!-- post body -->
