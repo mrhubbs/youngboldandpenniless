@@ -1,0 +1,2 @@
+{% capture url %}'/posts/tags/{{include.tag | slugify}}.html'{% endcapture %}
+<a class='post-as-link tag' href={{url}}>{{ include.tag }}</a>

@@ -1,0 +1,20 @@
+---
+layout: post
+author: Chloe
+title: Why We Don't Use Air Conditioning
+tags: musings
+---
+
+We have lived in two different apartments since being married, both equipped with either central air or a window air unit. Yet, as a general rule, walking into our house will not bring you any temperature relief in the summer! I know some people<!--more--> make this choice in order to save money, and, yes, turning the air off does save (considerably, in our experience), but this isn’t really our reason at all. And I promise, we aren’t crazy!!
+
+So why don’t we love air conditioning?
+
+One of our biggest philosophical beliefs is that we were created in unity with nature and that nature has the unique ability to easily bring us into connection with God, ourselves, and other people. God created this world as the perfect home for us, and as such, simple living, and natural living, will bring us closer to Him in ways harder to achieve when our minds and eyes are surrounded with man-made stuff. There is plenty of evidence for this: things as simple as the beauty of a sunset, the relaxed and connected feeling you get from disconnecting and disappearing into the woods for a few days, the fresh fruits and vegetables that have so many important nutrients for our bodies, the freshness and health of the outside air compared to indoors, and one of my favorites- the ability that the earth (dirt and sand) has to detoxify our bodies simply by touch (this is called earthing, and it is legit–look it up if you haven’t heard of it before).
+
+From this philosophical background, you can probably already guess the answer to the question that titles this post. We have found that when we are constantly in air conditioning, with windows closed and an artificial temperature surrounding us, we are less connected to nature and to the outdoors! Our bodies do not adjust to the summer temperature nearly as well, meaning we don’t want to be outside as much, and we can’t hear or smell or taste the sounds and smells of the fresh air.
+
+I remember one summer in college, I had a very intense and time-consuming job. This job went from 7am to about 9:30pm every day of the week. When the summer ended, I felt like I hadn’t really experienced the sun that I love and need so much! Now, living in my own place, being at home most of the day, I feel like I am always outside, even if I am in the coziness of my own home and in my own bed. One of the most refreshing feelings in the summer is to lay down on my bed and feel the breeze coming in from the window and being circulated by the ceiling fan. This can put me right to sleep! I am relaxed and feel so connected to nature every day.
+
+Yes, in the summer it can get really hot, and we have been known to turn the air on for a little bit on the worst of days, but this is rare. Once we get used to the temperature, it doesn’t bother us too much. This works in reverse too, for the winter. We don’t go so far as to not use our heat, but we do try to keep it as cool as possible in the house. Again, this isn’t just to save money. One day, I went in to work (I don’t work a very regular schedule) all cozied up in a sweater and boot socks— and was SWEATING. It’s funny, as a people, we seem to only be able to tolerate one temperature: 70. After that experience, I got to reflecting and was pretty sad.
+
+This post is mostly just a conglomeration of thoughts that have been in my  head with the extremely hot temperatures the last few weeks, but, maybe it might get you to think outside of the air-conditioning-is-life mindset that seems to dominate our culture, if even just for a bit. The benefits of nature can be covered in depth in its own post, but if you are someone who already does love being connected to the world around us and sees it as a gift(a better gift even then unending technology), then maybe this post makes sense to you. We don’t hate central air. Definitely not. But, there is something sad about spending the majority of our time in artificial air of any kind. It’s artificial.

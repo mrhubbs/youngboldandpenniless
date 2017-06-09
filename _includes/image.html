@@ -1,0 +1,26 @@
+
+<!-- default width to 50% if not specified -->
+{% if include.width == nil %}
+  {% assign width = '50%' %}
+{% else %}
+  {% assign width = include.width %}
+{% endif %}
+
+<div class='clearfix post-image' width='100%'>
+<div width='{{ width }}' style='min-width: 200px; max-width: {{ width }};'
+  {% if include.style == 'center' %}
+    class='center-block'
+  {% else if include.style == 'left' %}
+    class='pull-left'
+  {% else %}
+    class='pull-right'
+  {% endif %}
+>
+
+  <img src='{{ include.src }}' alt='{{ include.alt }}' width='100%'/>
+
+  {% if include.caption != nil %}
+    <p class='post-image-caption'>{{ include.caption }}</p>
+  {% endif %}
+</div>
+</div>
