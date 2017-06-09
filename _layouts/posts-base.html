@@ -1,0 +1,24 @@
+---
+layout: basepage
+site_section: blog
+---
+
+<div class='container'>
+  {% if page.tag %}
+    <div class='pull-right'>
+      &nbsp;{% include tag-link.html tag=page.tag %}
+    </div>
+  {% endif %}
+  <ul class='nav nav-pills pull-right'>
+    {% include header_nav_item.html title="Feed" url="/posts/" %}
+    {% include header_nav_item.html title="Tags" url="/posts/tags/" %}
+  </ul>
+</div>
+
+<div class='container'>
+<div class='row'>
+
+  {{ content }}
+
+</div>
+</div>

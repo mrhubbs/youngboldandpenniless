@@ -1,18 +1,19 @@
 
 
 $homepage-sep-space: 2.5rem;
+$homepage-banner-bg-color: rgb(226, 226, 226);
 
 
 .banner {
   // background: #79c296;
 
   //Adapt the image size to the screen size.
-  background: #dedede url('/static/images/homepage-bg-md.jpg') center center no-repeat;
+  background: $homepage-banner-bg-color url('/static/images/homepage-bg-md.jpg') center center no-repeat;
   @media screen and (max-width: 768px) {
-    background: #dedede url('/static/images/homepage-bg-sm.jpg') center center no-repeat;
+    background: $homepage-banner-bg-color url('/static/images/homepage-bg-sm.jpg') center center no-repeat;
   }
   @media screen and (min-width: 992px) {
-    background: #dedede url('/static/images/homepage-bg-lg.jpg') center center no-repeat;
+    background: $homepage-banner-bg-color url('/static/images/homepage-bg-lg.jpg') center center no-repeat;
   }
   background-size: cover;
 }
