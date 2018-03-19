@@ -1,0 +1,14 @@
+---
+layout: posts-base
+site_section: blog
+---
+
+
+<!-- Page that lists all posts in chronological order.
+     -->
+
+{% for post in site.posts %}
+
+  {% include post-teaser.html %}
+
+{% endfor %}

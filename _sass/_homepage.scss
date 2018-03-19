@@ -1,0 +1,110 @@
+
+
+$homepage-sep-space: 2.5rem;
+$homepage-banner-bg-color: rgb(226, 226, 226);
+
+
+.banner {
+  // background: #79c296;
+
+  //Adapt the image size to the screen size.
+  background: $homepage-banner-bg-color url('/static/images/homepage-bg-md.jpg') center center no-repeat;
+  @media screen and (max-width: 768px) {
+    background: $homepage-banner-bg-color url('/static/images/homepage-bg-sm.jpg') center center no-repeat;
+  }
+  @media screen and (min-width: 992px) {
+    background: $homepage-banner-bg-color url('/static/images/homepage-bg-lg.jpg') center center no-repeat;
+  }
+  background-size: cover;
+}
+
+
+.banner-site-title {
+  max-width: 1200px;
+  padding: $homepage-sep-space;
+  margin: 0 auto;
+
+  font-family: "Amatic SC", cursive;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+  line-height: 1;
+  color: #111;
+
+  // Adapt the font size to the screen size.
+  font-size: 7rem;
+  @media screen and (max-width: 768px) {
+    font-size: 6rem;
+  }
+  @media screen and (min-width: 992px) {
+    font-size: 9rem;
+  }
+}
+
+
+.homepage-sep {
+  height: 2px;
+  width: 60%;
+  max-width: 1200px;
+  background-image: linear-gradient(90deg, transparent 0%, #111 10%, #111 90%, transparent 100%);
+}
+
+
+.site-mantra {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: "Fox In The Snow", cursive;
+  font-weight: bold;
+
+  color: #111;
+
+  padding: $homepage-sep-space;
+}
+
+
+.big-button {
+  background: #3d3a3a;
+  display: inline-block;
+  font-size: 2.5em;
+  padding: 2rem;
+  width: 90%;
+
+  @media(max-width:767px) { font-size: 2.2rem; }
+  @media(min-width:768px) { font-size: 2.5rem; }
+  @media(min-width:992px) { font-size: 2.5rem; }
+  @media(min-width:1200px) { font-size: 3rem; }
+}
+
+.big-button:hover {
+  text-decoration: none;
+}
+
+
+.content-box {
+  background: rgba(0, 0, 0, .9);
+
+  h1 {
+    font-family: "Fox In The Snow", cursive;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    padding: .45em;
+    margin: 0 0;
+  }
+
+  padding: 10px auto;
+}
+
+
+.footnote {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-style: oblique;
+}
+
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}

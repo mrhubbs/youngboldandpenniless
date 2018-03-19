@@ -1,0 +1,10 @@
+destination: _site
+excerpt_separator: <!--more-->
+destination: _site
+baseurl:
+url: http://youngboldandpenniless.com
+permalink: /posts/:year/:i_month/:title.html
+tag_page_dir: posts/tags
+exclude:
+  - README.md
+  - "*.js"

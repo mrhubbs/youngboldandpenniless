@@ -1,0 +1,14 @@
+---
+layout: posts-base
+site_section: blog
+---
+
+<!-- This is the page that lists all tags. -->
+
+<!-- Sort alphabetically -->
+{% assign tags = site.tags | sort %}
+
+{% for tag_post in tags %}
+  {% capture tag %}{{ tag_post[0] }}{% endcapture %}
+  {% include tag-link.html tag=tag %}
+{% endfor %}

@@ -1,0 +1,9 @@
+---
+layout: posts-base
+---
+
+<ul>
+{% for post in page.posts %}
+  {% include post-teaser.html %}
+{% endfor %}
+</ul>

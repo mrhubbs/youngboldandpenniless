@@ -1,0 +1,10 @@
+
+{% assign classes = '' %}
+{% if (page.url == include.url or include.active == 'TRUE' or
+       (layout.site_section == include.site_section and include.site_section != nil)) %}
+  {% assign classes = 'nav-item-active' %}
+{% endif %}
+
+<li>
+  <a href='{{ site.baseurl }}{{ include.url }}' class='nav-item {{ include.classes }} {{ classes }}'>{{ include.title }}</a>
+</li>
