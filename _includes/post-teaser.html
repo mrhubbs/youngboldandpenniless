@@ -7,8 +7,9 @@
   {% include post-meta.html date=post.date author=post.author written=post.written edited=post.edited %}
   <br>
 
-  <!-- TODO: there are a couple newlines between the excerpt and the post -->
-  <p>{{post.excerpt | strip_html}}&hellip;</p>
+  <!-- remove the paragraph tags so we don't get newlines between the excerpt
+       and the ellipses -->
+  <p>{{post.excerpt | remove: '<p>' | remove: '</p>'}}&hellip;</p>
 
   <hr>
 

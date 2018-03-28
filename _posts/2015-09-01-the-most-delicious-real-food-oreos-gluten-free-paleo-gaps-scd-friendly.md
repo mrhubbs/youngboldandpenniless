@@ -14,6 +14,7 @@ tags:
   - paleo
   - real food
   - scd
+---
 
 I absolutely LOVE oreos. In the distant past of a previous life, Will would oftentimes bring me home a little surprise gift of flowers and my own personal six pack of oreos. Delish! My favorite kinds are birthday cake and any with colored cream in the middle-somehow they seem to<!--more--> have just the right amount of fluffiness that you don’t get with double-stuffed or regular ol’ white cream.
 
