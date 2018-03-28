@@ -1,4 +1,30 @@
-<div class='post-meta'>
-  <!-- TODO: write a filter to add the "pretty" suffix to the date, e.g. st, nd, rd, th -->
-  {{ post.date | date: "%A, %B %-d, %Y" }} by {{ post.author }}
-</div>
+<p>
+  <!-- If we have an author, we end the meta with "by PERSON" -->
+  {% if include.author != nil %}
+    {% capture author %}by {{ include.author }}{% endcapture %}
+  {% else %}
+    {% assign author = '' %}
+  {% endif %}
+
+  <div class='post-meta'>
+    <!-- Prefix posted date with "Posted: " if we also show written or edited date. -->
+    {% if include.written != nil or include.edited != nil %}
+      Posted:&nbsp;
+    {% endif %}
+    {{ include.date | pretty_date }} {{ author }}
+  </div>
+
+  <!-- Date written, if available -->
+  {% if include.written != nil %}
+    <div class='post-meta'>
+      Written: {{ include.written | pretty_date }}
+    </div>
+  {% endif %}
+
+  <!-- Date last edited, if available -->
+  {% if include.edited != nil %}
+    <div class='post-meta'>
+      Last Edited: {{ include.edited | pretty_date }}
+    </div>
+  {% endif %}
+</p>
