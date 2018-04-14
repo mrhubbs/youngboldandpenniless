@@ -8,7 +8,7 @@
   color: $post-color;
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: "Fox In The Snow", cursive;
+    font-family: "Fox In The Snow";
     font-weight: bold;
     color: $post-color;
   }
@@ -19,9 +19,8 @@
 }
 
 .post-meta {
-  opacity: .697;
-  font-size: 1.6rem;
-  font-style: italic;
+  opacity: .6;
+  font-size: 1.57rem;
   margin-left: 0.78rem;
 }
 
