@@ -3,20 +3,15 @@ layout: posts-base
 site_section: blog
 ---
 
-<br>
-
 <div class='container'>
   <div class='row'>
-    <!-- fluid -->
-    <!-- <div class='post-body col-xs-12 col-xs-offset-0 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2'> -->
-    <!-- non-fluid -->
     <div class='post-body {% include page_sizing.html %}'>
+      <!-- Output metadata about the post -->
+      {% include post-meta.html date=page.date author=page.author written=page.written edited=page.edited %}
 
       <!-- post header -->
       <h1 class='post-title'>{{ page.title }}</h1>
 
-      <!-- Output metadata about the post -->
-      {% include post-meta.html date=page.date author=page.author written=page.written edited=page.edited %}
       <br>
 
       <!-- post body -->

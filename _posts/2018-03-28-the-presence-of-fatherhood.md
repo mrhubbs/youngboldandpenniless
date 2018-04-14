@@ -1,11 +1,11 @@
 ---
 layout: post
 author: William
-written: 2017-03-01
-edited: 2018-03-28
 title: The Presence of Fatherhood
 tags: [musings, fatherhood]
 ---
+
+*Written March 1, 2017:*
 
 One night about five months ago I lay in bed with my head spinning. It had been spinning all day. I had slacked on my normal routine of a morning and afternoon walk and staying inwardly relaxed, instead letting myself get caught up in peoples' excited attitudes at work. I don't feed on excitement like<!--more--> some people do; I need periods of calm. Now I wasn't relaxed and it was hard to stop thinking of work. When I get into this state I'm not even thinking cohesive thoughts. I just have fragments of memories, observations, and work-related ideas streaming through my head.
 

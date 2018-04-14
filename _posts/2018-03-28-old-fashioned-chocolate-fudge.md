@@ -1,13 +1,11 @@
 ---
 layout: post
 author: William
-written: 2017-01-27
-edited: 2018-03-28
 title: Old-Fashioned Chocolate Fudge
 tags: [recipes, chocolate, desserts]
 ---
 
-Adapted from: [old fashioned chocolate fudge](http://allrecipes.com/recipe/9420/old-fashioned-chocolate-fudge/)
+*Written January 27, 2017:* Adapted from: [old fashioned chocolate fudge](http://allrecipes.com/recipe/9420/old-fashioned-chocolate-fudge/)
 
 **Ingredients**
 
