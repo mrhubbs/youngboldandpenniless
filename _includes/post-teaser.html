@@ -3,8 +3,8 @@
 <div class='post-body {% include page_sizing.html %}'>
 
   <!-- post header -->
-  <h1 class='post-title'><a href="{{ post.url }}">{{ post.title }}</a></h1>
   {% include post-meta.html date=post.date author=post.author written=post.written edited=post.edited %}
+  <h1 class='post-title'><a href="{{ post.url }}">{{ post.title }}</a></h1>
   <br>
 
   <!-- remove the paragraph tags so we don't get newlines between the excerpt

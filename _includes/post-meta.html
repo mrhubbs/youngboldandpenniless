@@ -1,4 +1,4 @@
-<p>
+<div style='width: 100%; position: relative;'>
   <!-- If we have an author, we end the meta with "by PERSON" -->
   {% if include.author != nil %}
     {% capture author %}by {{ include.author }}{% endcapture %}
@@ -6,25 +6,14 @@
     {% assign author = '' %}
   {% endif %}
 
-  <div class='post-meta'>
-    <!-- Prefix posted date with "Posted: " if we also show written or edited date. -->
-    {% if include.written != nil or include.edited != nil %}
-      Posted:&nbsp;
-    {% endif %}
-    {{ include.date | pretty_date }} {{ author }}
+  <div class='post-meta' style='display: inline; width: 50%;'>
+    {{ include.date | date: '%B %d, %Y' }} {{ author }}
   </div>
-
-  <!-- Date written, if available -->
-  {% if include.written != nil %}
-    <div class='post-meta'>
-      Written: {{ include.written | pretty_date }}
-    </div>
-  {% endif %}
 
   <!-- Date last edited, if available -->
   {% if include.edited != nil %}
-    <div class='post-meta'>
-      Last Edited: {{ include.edited | pretty_date }}
+    <div class='post-meta' style='display: inline; width: 50%; float: right; text-align: right;'>
+      (Edited {{ include.edited | date: '%B %d, %Y' }})
     </div>
   {% endif %}
-</p>
+</div>
