@@ -1,4 +1,10 @@
 
+@import "defs";
+
 .avoidwrap {
   display: inline-block;
+}
+
+.text-brand {
+  color: $site-brand-color;
 }
